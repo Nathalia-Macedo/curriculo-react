@@ -1,0 +1,47 @@
+/* ProjectCard.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.project-card {
+    display: flex;
+    flex-direction: column; /* Mudamos para coluna para um layout mais moderno */
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #ccc; /* Borda suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaço interno */
+    margin: 10px; /* Margem entre os cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+    transition: transform 0.2s;
+    width: 300px; /* Largura fixa para o card */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px); /* Leve movimento ao passar o mouse */
+  }
+  
+  .project-content {
+    flex: 1; /* Permite que o conteúdo ocupe o espaço restante */
+  }
+  
+  .project-content h3 {
+    margin: 0;
+    font-size: 1.2em; /* Tamanho da fonte */
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    color: #333; /* Cor do texto */
+  }
+  
+  .project-content p {
+    margin: 5px 0; /* Margem entre título e descrição */
+    font-size: 0.9em; /* Tamanho menor para a descrição */
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    color: #555; /* Cor da descrição */
+  }
+  
+  /* Estilos para o container de projetos */
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards se ajustem na linha */
+    justify-content: center; /* Centraliza os cards */
+    gap: 10px; /* Espaço entre os cards */
+  }
+  

@@ -1,0 +1,43 @@
+/* Header.css */
+header {
+    background-color: #e0f7fa; /* Azul bebê */
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    color: #004d40; /* Cor do texto (um tom mais escuro de azul) */
+  }
+  
+  nav ul li a {
+    color: #004d40; /* Cor dos links */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+  }
+  
+  nav ul li a:hover {
+    background-color: #b2ebf2; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column; /* Muda para coluna em telas menores */
+      align-items: center; /* Centraliza os itens */
+    }
+  
+    nav ul li {
+      margin: 0.5rem 0; /* Espaçamento entre os itens */
+    }
+  }
+  

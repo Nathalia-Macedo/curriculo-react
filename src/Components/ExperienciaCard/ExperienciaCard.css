@@ -1,0 +1,61 @@
+/* ExperienciaCard.css */
+.experiencia-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* Fundo branco */
+    border: 1px solid #ccc; /* Borda suave */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaço interno */
+    margin: 10px; /* Margem entre os cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 300px; /* Largura fixa para o card */
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  .company-logo {
+    width: 60px; /* Largura do círculo */
+    height: 60px; /* Altura do círculo */
+    border-radius: 50%; /* Faz o círculo */
+    overflow: hidden; /* Oculta o excesso */
+    margin-bottom: 10px; /* Espaço abaixo do logo */
+  }
+  
+  .company-logo img {
+    width: 100%; /* Faz a imagem preencher o círculo */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  
+  .company-name {
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    font-size: 1.2em; /* Tamanho da fonte */
+    margin: 5px 0; /* Margem em cima e embaixo */
+  }
+  
+  .work-period {
+    font-size: 0.9em; /* Tamanho menor para o período */
+    color: #555; /* Cor do texto */
+    margin: 5px 0; /* Margem em cima e embaixo */
+  }
+  
+  .toggle-button {
+    background-color: #007bff; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 15px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    margin: 10px 0; /* Espaço acima e abaixo do botão */
+    transition: background-color 0.3s; /* Transição suave */
+  }
+  
+  .toggle-button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+  }
+  
+  .description {
+    margin-top: 10px; /* Espaço acima da descrição */
+    font-size: 0.9em; /* Tamanho da fonte da descrição */
+    color: #333; /* Cor da descrição */
+  }
+  
