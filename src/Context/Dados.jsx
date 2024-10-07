@@ -21,13 +21,13 @@ export const CurriculoProvider = ({ children }) => {
         anoEntrada: '2020',
         anoSaida: '2021',
         descricao: 'Registro de contas a pagar, atendimento ao cliente, lançamento de notas fiscais!',
-        logo: 'URL_DO_LOGO' // Substitua pela URL da imagem da empresa
+        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCT8NHZ0-WSLxWmcFx_i0Kz8ai4aN5AQiwIQ&s' // Substitua pela URL da imagem da empresa
       }, {
         empresa: 'Buger King',
         anoEntrada: '2021',
         anoSaida: '2021',
         descricao: 'Preparo de hamburgueres e batatas, limpeza do local, organização das mesas e atendimento ao cliente',
-        logo: 'URL_DO_LOGO' // Substitua pela URL da imagem da empresa
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1879px-Burger_King_2020.svg.png' // Substitua pela URL da imagem da empresa
       },
       // Adicione mais experiências conforme necessário
     ]
