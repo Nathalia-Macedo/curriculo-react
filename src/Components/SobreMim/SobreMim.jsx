@@ -2,7 +2,8 @@ import React from 'react';
 import FotoEDescricao from './Me/FotoDescricao';
 import eu from '../../Assets/eu linda.jpg';
 import Timeline from './Timeline/Timeline';
-
+import Contadores from './Contadores/Contadores';
+import Skills from './Skills/Skills';
 const SobreMim = () => {
     return (
         <div className="sobre-mim-container">
@@ -28,6 +29,8 @@ Quando não estou codificando, você pode me encontrar na academia, buscando sem
             />
 
             <Timeline/>
+            <Contadores/>
+            <Skills/>
             {/* Outras seções do 'Sobre Mim' podem ser adicionadas aqui */}
         </div>
     );

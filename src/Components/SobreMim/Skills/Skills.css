@@ -1,0 +1,60 @@
+.skills {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaço entre as habilidades */
+    max-width: 100%; /* Para garantir que não ultrapasse a largura da tela */
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column; /* Organiza a imagem e o texto verticalmente */
+    align-items: center; /* Centraliza os itens */
+    text-align: center;
+    transition: transform 0.3s;
+    max-width: 120px; /* Largura máxima para manter o layout */
+    margin: 10px; /* Espaçamento em torno de cada habilidade */
+    cursor: pointer; /* Cursor muda para indicar interatividade */
+  }
+  
+  .skill-image {
+    width: 60px; /* Largura da imagem */
+    height: 60px; /* Altura da imagem */
+    margin-bottom: 5px; /* Espaço entre a imagem e o texto */
+  }
+  
+  .skill-info {
+    font-size: 14px; /* Tamanho do texto para as habilidades */
+  }
+  
+  /* Transição ao passar o mouse */
+  .skill-item:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    .skill-item {
+      max-width: 80%; /* Aumenta a largura ocupada em telas pequenas */
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .skill-item {
+      max-width: 45%; /* Aumenta o espaço em telas médias */
+    }
+  }
+  
+  @media (min-width: 901px) {
+    .skill-item {
+      max-width: 30%; /* Ocupa menos espaço em telas grandes */
+    }
+  }
+  

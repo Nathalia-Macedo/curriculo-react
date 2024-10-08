@@ -1,5 +1,9 @@
 import React, { createContext, useState, useContext } from 'react';
-
+import HTML from '../Assets/HTML.png'
+import CSS from '../Assets/CSS.png'
+import REACT from '../Assets/React.png'
+import JS from '../Assets/JS.png'
+import NODE from '../Assets/NODE.png'
 // Criar o contexto
 const CurriculoContext = createContext();
 
@@ -20,17 +24,16 @@ export const CurriculoProvider = ({ children }) => {
         anoEntrada: '2020',
         anoSaida: '2021',
         descricao: 'Registro de contas a pagar, atendimento ao cliente, lançamento de notas fiscais!',
-        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCT8NHZ0-WSLxWmcFx_i0Kz8ai4aN5AQiwIQ&s' // Substitua pela URL da imagem da empresa
+        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCT8NHZ0-WSLxWmcFx_i0Kz8ai4aN5AQiwIQ&s'
       }, {
         empresa: 'Burger King',
         anoEntrada: '2021',
         anoSaida: '2021',
         descricao: 'Preparo de hamburgueres e batatas, limpeza do local, organização das mesas e atendimento ao cliente',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1879px-Burger_King_2020.svg.png' // Substitua pela URL da imagem da empresa
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1879px-Burger_King_2020.svg.png'
       },
-      // Adicione mais experiências conforme necessário
     ],
-    timelineEventos: [ // Adicionando o estado da linha do tempo
+    timelineEventos: [
       {
         year: '2022',
         title: 'Conhecendo a Infinity School',
@@ -50,12 +53,32 @@ export const CurriculoProvider = ({ children }) => {
         year: '2024',
         title: 'Workshops na Infinity School',
         description: 'Iniciei minha jornada como monitora, ministrando workshops sobre programação, fazendo muito networking.',
-      },{
+      },
+      {
         year: '2024',
         title: 'Criação de Conteúdo',
         description: 'Comecei recentemente a desenvolver conteúdo no Instagram e na Hotmart!',
       },
     ],
+    contadorDados: {
+      anosDeExperiencia: 3,
+      projetosCompletados: 15,
+      aulasMinistradas: 50,
+      alunosAtendidos: 100,
+      horasDeAulaMinistradas: 200,
+      conteudosCriados: 100,
+      workshopsRealizados: 10,
+      interacoesRedesSociais: 500,
+      estudantesEmTutoria: 30,
+      livesRealizadas: 5,
+    },
+    skillsData: [
+      { id: 1, skill: "JavaScript", nivel: "Avançado", image: JS },
+      { id: 2, skill: "React", nivel: "Avançado", image: REACT },
+      { id: 3, skill: "CSS", nivel: "Intermediário", image: CSS },
+      { id: 4, skill: "HTML", nivel: "Avançado", image: HTML },
+      { id: 5, skill: "Node.js", nivel: "Intermediário", image: NODE },
+    ]
   });
 
   function gerarId(lista) {
@@ -98,8 +121,54 @@ export const CurriculoProvider = ({ children }) => {
     }));
   }
 
+  function atualizarContador(campo, valor) {
+    setTextos(prev => ({
+      ...prev,
+      contadorDados: {
+        ...prev.contadorDados,
+        [campo]: valor
+      }
+    }));
+  }
+
+  // Funções para manipular o skillsData
+  function adicionarSkill(novaSkill) {
+    setTextos(prev => ({
+      ...prev,
+      skillsData: [...prev.skillsData, { id: gerarId(prev.skillsData), ...novaSkill }]
+    }));
+  }
+
+  function removerSkill(id) {
+    setTextos(prev => ({
+      ...prev,
+      skillsData: prev.skillsData.filter(skill => skill.id !== id)
+    }));
+  }
+
+  function atualizarSkill(id, skillAtualizada) {
+    setTextos(prev => ({
+      ...prev,
+      skillsData: prev.skillsData.map(skill =>
+        skill.id === id ? { ...skill, ...skillAtualizada } : skill
+      )
+    }));
+  }
+
   return (
-    <CurriculoContext.Provider value={{ textos, setTextos, adicionarProjeto, atualizarTexto, removerProjeto, adicionarExperiencia, removerExperiencia }}>
+    <CurriculoContext.Provider value={{
+      textos,
+      setTextos,
+      adicionarProjeto,
+      atualizarTexto,
+      removerProjeto,
+      adicionarExperiencia,
+      removerExperiencia,
+      atualizarContador,
+      adicionarSkill,
+      removerSkill,
+      atualizarSkill
+    }}>
       {children}
     </CurriculoContext.Provider>
   );
