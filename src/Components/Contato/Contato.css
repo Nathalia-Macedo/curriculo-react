@@ -1,0 +1,45 @@
+/* Container da sessão de contato */
+.contato-container {
+    background-color: #f4f4f9; /* Cor de fundo suave */
+    padding: 50px 0; /* Espaçamento vertical */
+    text-align: center;
+  }
+  
+  .contato-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para os ícones de contato */
+  .icones-contato {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .contato-icone {
+    color: #333; /* Cor neutra dos ícones */
+    font-size: 2.5rem; /* Tamanho dos ícones */
+    transition: color 0.3s ease;
+  }
+  
+  .contato-icone:hover {
+    color: #007bff; /* Cor ao passar o mouse (azul suave) */
+    cursor: pointer;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .contato-icone {
+      font-size: 2rem; /* Ajusta o tamanho dos ícones em telas menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contato-icone {
+      font-size: 1.8rem; /* Ícones ainda menores para telas muito pequenas */
+    }
+  }
+  

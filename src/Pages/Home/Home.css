@@ -1,5 +1,27 @@
-.home{
-    display: flex;
-    justify-content: center;
-    
+/* Sessão principal que contém os projetos e as experiências */
+
+h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
+.session {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas pequenas */
+    justify-content: center; /* Centraliza os itens dentro da sessão */
+    gap: 20px; /* Espaço entre os cards */
+  }
+  
+  /* Ajuste para responsividade */
+  @media (max-width: 768px) {
+    .session {
+      align-items: center; /* Centraliza os itens */
+    }
+  }
+  
+  /* Para telas muito pequenas (mobile) */
+  @media (max-width: 480px) {
+    .session {
+      padding: 10px; /* Adiciona um padding para dar espaçamento nas laterais */
+    }
+  }
+  

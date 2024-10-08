@@ -1,7 +1,5 @@
-// ExperienciaCard.js
 import React, { useState } from 'react';
-import './ExperienciaCard.css'; // CSS para estilização
-
+import './ExperienciaCard.css'
 const ExperienciaCard = ({ experiencia }) => {
   const [isOpen, setIsOpen] = useState(false);
 

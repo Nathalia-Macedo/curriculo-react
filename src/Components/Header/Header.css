@@ -1,43 +1,92 @@
-/* Header.css */
-header {
-    background-color: #e0f7fa; /* Azul bebê */
-    padding: 1rem;
+/* Estilos principais para o header */
+.header {
+  font-family: 'Poppins', sans-serif;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Estilos para os links de navegação */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espaçamento entre ícone e texto */
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #007bff; /* Cor ao passar o mouse */
+}
+
+.nav-icon {
+  font-size: 1.2rem; /* Tamanho dos ícones */
+}
+
+/* Estilos do ícone de menu hambúrguer */
+.hamburger {
+  display: none; /* Oculto por padrão */
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
   }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-    margin: 0;
-    padding: 0;
+
+  .nav-links.open {
+    transform: translateX(0); /* Abre o menu */
   }
-  
-  nav ul li {
-    color: #004d40; /* Cor do texto (um tom mais escuro de azul) */
+
+  .hamburger {
+    display: block; /* Exibe o menu hambúrguer */
   }
-  
-  nav ul li a {
-    color: #004d40; /* Cor dos links */
-    text-decoration: none;
-    padding: 0.5rem 1rem; /* Espaçamento interno */
-    transition: background-color 0.3s ease; /* Efeito de transição */
+
+  .nav-links a {
+    font-size: 1.5rem; /* Aumenta o tamanho do texto e ícones em dispositivos móveis */
   }
-  
-  nav ul li a:hover {
-    background-color: #b2ebf2; /* Cor de fundo ao passar o mouse */
-    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Para telas menores ainda (dispositivos móveis) */
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 1.3rem;
   }
-  
-  /* Estilos responsivos */
-  @media (max-width: 600px) {
-    nav ul {
-      flex-direction: column; /* Muda para coluna em telas menores */
-      align-items: center; /* Centraliza os itens */
-    }
-  
-    nav ul li {
-      margin: 0.5rem 0; /* Espaçamento entre os itens */
-    }
-  }
-  
+}
