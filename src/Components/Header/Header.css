@@ -19,28 +19,15 @@
 
 /* Estilos para os links de navegação */
 .nav-links {
-  display: none; /* Ocultar links por padrão */
-}
-
-.nav-links.open {
-  display: flex; /* Exibir links quando o menu estiver aberto */
-  flex-direction: column; /* Empilhar os links verticalmente */
-  position: absolute; /* Posicionamento absoluto */
-  top: 60px; /* Abaixo do header */
-  right: 0; /* Alinhamento à direita */
-  background-color: #333; /* Cor de fundo do menu */
-  width: 100%; /* Largura total */
-  height: 100vh; /* Altura total da tela */
-  justify-content: center; /* Centralizar os itens verticalmente */
-  align-items: center; /* Centralizar os itens horizontalmente */
-  gap: 40px; /* Espaçamento entre os links */
-  transition: transform 0.3s ease; /* Transição suave */
+  display: flex; /* Exibir links horizontalmente em telas grandes */
 }
 
 .nav-links ul {
   list-style: none; /* Remove os marcadores da lista */
   padding: 0; /* Remove o padding padrão */
   margin: 0; /* Remove a margem padrão */
+  display: flex; /* Itens da lista horizontal no desktop */
+  gap: 20px; /* Espaçamento entre os links */
 }
 
 .nav-links li {
@@ -75,14 +62,42 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Esconde os links por padrão em telas menores */
+  }
+
+  .nav-links.open {
+    display: flex; /* Mostrar links quando o menu estiver aberto */
+    flex-direction: column; /* Empilhar links verticalmente */
+    position: absolute; /* Posicionamento absoluto */
+    top: 60px; /* Abaixo do header */
+    right: 0; /* Alinhamento à direita */
+    background-color: #333; /* Cor de fundo do menu */
+    width: 100%; /* Largura total */
+    height: auto; /* Altura automática para o conteúdo */
+    justify-content: flex-start; /* Alinhamento dos itens ao topo */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os links */
+    transition: transform 0.3s ease; /* Transição suave */
+  }
+
   .hamburger {
-    display: block; /* Exibe o menu hambúrguer */
+    display: block; /* Exibir o ícone de menu hambúrguer */
   }
 }
 
-/* Para telas menores ainda (dispositivos móveis) */
+/* Para telas muito pequenas (dispositivos móveis) */
 @media (max-width: 480px) {
   .nav-links a {
-    font-size: 1.3rem; /* Aumenta o tamanho do texto e ícones em dispositivos móveis */
+    font-size: 1.3rem; /* Aumentar o tamanho dos textos e ícones em telas muito pequenas */
+    width: 100%; /* Para que cada link ocupe a largura total */
+    text-align: center; /* Centraliza o texto do link */
+  }
+
+  .nav-links.open ul{
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
   }
 }
