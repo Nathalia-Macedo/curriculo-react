@@ -8,16 +8,17 @@ const Contato = () => {
     <section id="contato" className="contato-container">
       <h2>Entre em Contato</h2>
       <div className="icones-contato">
-        <a href="https://github.com/seu-perfil" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <a href="https://github.com/Nathalia-Macedo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <FaGithub className="contato-icone" />
         </a>
-        <a href="https://wa.me/seu-numero" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <a href="https://wa.me/71987257532" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
           <FaWhatsapp className="contato-icone" />
         </a>
-        <a href="https://www.instagram.com/seu-perfil" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <a href="https://www.instagram.com/nath_dev_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
           <FaInstagram className="contato-icone" />
         </a>
-        <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a href="www.linkedin.com/in/nathalia-de-macedo-martins-4aa693253
+" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <FaLinkedin className="contato-icone" />
         </a>
         <a href="https://hotmart.com/seu-perfil" target="_blank" rel="noopener noreferrer" aria-label="Hotmart">
