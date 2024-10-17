@@ -36,17 +36,18 @@ const Timeline = () => {
   }, [tema]); // O efeito será chamado quando o tema mudar
 
   return (
-    <div className={`timeline-container ${tema}`}>
+    <div className={`timeline-container ${tema}`} data-tema={tema}>
       <VerticalTimeline>
         {timelineEventos && timelineEventos.length > 0 ? (
           timelineEventos.map((evento, index) => (
-            <VerticalTimelineElement
+            <VerticalTimelineElement 
               key={index}
-              date={evento.year}
+              date={<span className={`year ${tema}`}>{evento.year}</span>} // Usando classe ao invés de ID fixo
               iconStyle={{ background: tema === 'escuro' ? '#333' : '#007bff', color: '#fff' }} // Estilo do ícone
               icon={<div className="timeline-icon" />} // Estilo personalizado do ícone
               contentStyle={{ background: tema === 'escuro' ? '#222' : '#fff', color: tema === 'escuro' ? '#ddd' : '#333' }} // Estilo do conteúdo
               contentArrowStyle={{ borderRight: `7px solid ${tema === 'escuro' ? '#222' : '#fff'}` }} // Estilo da seta
+              className={`vertical-timeline-element ${tema}`} // Adicionando a classe com base no tema
               ref={el => (timelineRef.current[index] = el)} // Referência para cada elemento
             >
               <h3 className="vertical-timeline-element-title">{evento.title}</h3>

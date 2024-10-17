@@ -1,46 +1,32 @@
-/* Timeline.css */
 .timeline-container {
-    position: relative;
-    padding: 50px 20px;
-    overflow: hidden;
-    z-index: 0; /* Coloca o conteúdo acima do fundo */
-}
+    position: relative; /* Para posicionar os elementos dentro */
+  }
+  
+/* Linha central padrão, preta para o tema claro com maior especificidade */
+.timeline-container .VerticalTimeline {
+    border-left: 2px solid black; /* Linha central preta para o tema claro */
+  }
+  
+  /* Altera a linha central para branca quando o tema é escuro */
+  [data-tema='escuro'] .timeline-container .VerticalTimeline {
+    border-left: 2px solid white; /* Linha central branca no tema escuro */
+  }
+  
+  
+  /* Estilo dos eventos da linha do tempo */
+  .vertical-timeline-element-title {
+    font-weight: bold;
+  }
+  
 
-/* Estilo para o tema claro */
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    transform: translate(-50%, -50%);
-    animation: rotate 20s linear infinite; /* Animação de rotação */
-    z-index: -1; /* Coloca o fundo atrás do conteúdo */
-}
-
-/* Estilo para o tema escuro */
-.timeline-container.escuro {
-    background-color: #121212; /* Fundo escuro para a linha do tempo */
-}
-
-.timeline-container.escuro::before {
-    background: linear-gradient(45deg, rgba(50, 50, 50, 0.5), rgba(0, 123, 255, 0.5)); /* Gradiente para o tema escuro */
-}
-
-.timeline-container.escuro .vertical-timeline-element-title {
-    color: #f0f0f0; /* Cor do título no tema escuro */
-}
-
-.timeline-container.escuro p {
-    color: #e0e0e0; /* Cor do texto no tema escuro */
-}
-
-@keyframes rotate {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
-}
+  
+  /* Opções de fonte e espaçamento para o conteúdo */
+  .vertical-timeline-element-content {
+    padding: 10px; /* Espaçamento interno */
+  }
+  
+  /* Adiciona transições para a linha central, se desejado */
+  .VerticalTimeline {
+    transition: border-color 0.3s ease; /* Transição suave ao mudar de tema */
+  }
+  

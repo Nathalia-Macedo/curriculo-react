@@ -1,15 +1,16 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import HTML from '../Assets/HTML.png'
-import CSS from '../Assets/CSS.png'
-import REACT from '../Assets/React.png'
-import JS from '../Assets/JS.png'
-import NODE from '../Assets/NODE.png'
-import TS from '../Assets/Typescript.svg.png'
-import NEXT from '../Assets/next.png'
-import SELENIUM from '../Assets/selenium.png'
-import GIT from '../Assets/git.png'
-import GITHUB from '../Assets/GITHUB.png'
-import PYTHON from '../Assets/Py.png'
+import HTML from '../Assets/HTML.png';
+import CSS from '../Assets/CSS.png';
+import REACT from '../Assets/React.png';
+import JS from '../Assets/JS.png';
+import NODE from '../Assets/NODE.png';
+import TS from '../Assets/Typescript.svg.png';
+import NEXT from '../Assets/next.png';
+import SELENIUM from '../Assets/selenium.png';
+import GIT from '../Assets/git.png';
+import GITHUB from '../Assets/GITHUB.png';
+import PYTHON from '../Assets/Py.png';
+
 // Criar o contexto
 const CurriculoContext = createContext();
 
@@ -89,24 +90,31 @@ export const CurriculoProvider = ({ children }) => {
       { id: 9, skill: "GIT", nivel: "Intermediário", image: GIT },
       { id: 10, skill: "GitHub", nivel: "Intermediário", image: GITHUB },
       { id: 11, skill: "Python", nivel: "Intermediário", image: PYTHON },
-    ]
+    ],
+    tema: 'claro' // Adicionando a variável tema aqui
   });
 
-    // Estado do tema
-    const [tema, setTema] = useState(() => localStorage.getItem('tema') || 'claro');
+  // Função para alternar o tema entre claro e escuro
+  const alternarTema = () => {
+    const novoTema = textos.tema === 'claro' ? 'escuro' : 'claro';
+    setTextos(prev => ({
+      ...prev,
+      tema: novoTema
+    }));
+    localStorage.setItem('tema', novoTema); // Salva a preferência no localStorage
+  };
 
-    // Função para alternar o tema entre claro e escuro
-    const alternarTema = () => {
-      const novoTema = tema === 'claro' ? 'escuro' : 'claro';
-      setTema(novoTema);
-      localStorage.setItem('tema', novoTema); // Salva a preferência no localStorage
-    };
-  
-    // Efeito para aplicar o tema ao document root
-    useEffect(() => {
-      document.documentElement.setAttribute('data-tema', tema); // Define o atributo no HTML
-    }, [tema]);
-  
+  // Efeito para aplicar o tema ao document root
+  useEffect(() => {
+    const temaSalvo = localStorage.getItem('tema');
+    if (temaSalvo) {
+      setTextos(prev => ({
+        ...prev,
+        tema: temaSalvo
+      }));
+    }
+    document.documentElement.setAttribute('data-tema', textos.tema); // Define o atributo no HTML
+  }, [textos.tema]);
 
   function gerarId(lista) {
     if (lista.length === 0) return 1;
@@ -195,7 +203,7 @@ export const CurriculoProvider = ({ children }) => {
       adicionarSkill,
       removerSkill,
       atualizarSkill,
-      tema,
+      tema: textos.tema, // Expondo o tema aqui
       alternarTema
     }}>
       {children}
