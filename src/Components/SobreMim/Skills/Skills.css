@@ -3,26 +3,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Certifica-se de que o container ocupe toda a largura */
+  
+  width: 100%;
+  overflow: hidden; /* Evita overflow horizontal */
 }
 
-.skills h2{
+.skills h2 {
   color: black;
 }
 
 .skills-list {
   width: 100%;
-  max-width: 1300px; /* Limita o tamanho máximo do carrossel */
+  max-width: 1300px;
+  margin: 0 auto; /* Centraliza o carrossel */
+  overflow: hidden;
 }
 
 .slick-slider {
   display: flex;
-  justify-content: center; /* Centraliza o carrossel */
+  justify-content: center;
 }
 
 .slick-track {
   display: flex;
-  justify-content: center; /* Garante que os itens no carrossel sejam centralizados */
+  justify-content: center;
 }
 
 .skill-item {
@@ -31,34 +35,33 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 10px; /* Espaçamento interno */
   transition: transform 0.3s;
-  margin: 10px;
   cursor: pointer;
+  box-sizing: border-box; /* Garante que o padding e margin sejam considerados no tamanho total */
 }
 
 .skill-image {
   width: 60px;
   height: 60px;
-  margin-bottom: 5px;
+  margin-bottom: 10px; /* Maior espaçamento entre imagem e texto */
 }
-
-
-
 
 .skill-info {
   font-size: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 30px;
 }
 
 .skill-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Efeito de zoom suave no hover */
 }
 
 /* Ajustes para os pontinhos de navegação do carrossel */
 .slick-dots li button:before {
-  color: #fff; /* Cor dos pontinhos */
+  color: #fff;
 }
 
 .slick-dots li.slick-active button:before {
