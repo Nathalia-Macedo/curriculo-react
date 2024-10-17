@@ -1,7 +1,12 @@
 /* Estilos principais para o header */
+
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   font-family: 'Poppins', sans-serif;
-  background-color: #333;
+  background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Gradiente do roxo para verde água */
   color: white;
   padding: 10px 20px;
 }
@@ -14,7 +19,7 @@
 
 .logo h1 {
   font-size: 1.5rem;
-  color: white;
+  color: #fff; /* Mantém a cor branca para o logo */
 }
 
 /* Estilos para os links de navegação */
@@ -36,7 +41,7 @@
 }
 
 .nav-links a {
-  color: white;
+  color: #fff; /* Cor branca para os links */
   text-decoration: none;
   font-size: 1rem;
   display: flex;
@@ -46,7 +51,7 @@
 }
 
 .nav-links a:hover {
-  color: #007bff; /* Cor ao passar o mouse */
+  color: #ffd700; /* Dourado ao passar o mouse */
 }
 
 .nav-icon {
@@ -58,6 +63,7 @@
   display: none; /* Oculto por padrão */
   font-size: 1.8rem;
   cursor: pointer;
+  color: #fff; /* Cor do ícone hambúrguer */
 }
 
 /* Responsividade */
@@ -72,7 +78,9 @@
     position: absolute; /* Posicionamento absoluto */
     top: 60px; /* Abaixo do header */
     right: 0; /* Alinhamento à direita */
-    background-color: #333; /* Cor de fundo do menu */
+    background-color:black;
+  
+    /* background: linear-gradient(135deg, #6e45e2, #88d3ce); Gradiente do roxo para verde água */
     width: 100%; /* Largura total */
     height: auto; /* Altura automática para o conteúdo */
     justify-content: flex-start; /* Alinhamento dos itens ao topo */
@@ -92,9 +100,10 @@
     font-size: 1.3rem; /* Aumentar o tamanho dos textos e ícones em telas muito pequenas */
     width: 100%; /* Para que cada link ocupe a largura total */
     text-align: center; /* Centraliza o texto do link */
+    
   }
 
-  .nav-links.open ul{
+  .nav-links.open ul {
     flex-direction: column;
     height: 100vh;
     justify-content: center;

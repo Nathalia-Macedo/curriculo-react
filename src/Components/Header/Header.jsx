@@ -29,7 +29,7 @@ function Header() {
               </a>
             </li>
             <li>
-              <a href="#aulas" onClick={toggleMenu}>
+              <a href="#aulasparticulares" onClick={toggleMenu}>
                 <FaChalkboardTeacher className="nav-icon" /> Aulas Particulares
               </a>
             </li>
