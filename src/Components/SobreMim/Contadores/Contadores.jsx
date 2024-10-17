@@ -34,6 +34,9 @@ const Contadores = () => {
   }, []);
 
   useEffect(() => {
+    // Garante que `contadorRefs.current` sempre tenha o tamanho correto
+    contadorRefs.current = contadorRefs.current.slice(0, contadorDados.length);
+
     // Aplica a animação de contagem para todos os elementos visíveis
     contadorRefs.current.forEach((ref, index) => {
       if (ref) {
@@ -45,7 +48,7 @@ const Contadores = () => {
         });
       }
     });
-  }, [contadorDados, mostrarTodos]);
+  }, [contadorDados, mostrarTodos, isMobile]); // Adicione `mostrarTodos` e `isMobile` como dependências
 
   const contadoresParaExibir = mostrarTodos || !isMobile ? contadorDados : contadorDados.slice(0, 5);
 
@@ -53,7 +56,10 @@ const Contadores = () => {
     <div className="contador-container">
       {contadoresParaExibir.map((contador, index) => (
         <div className="contador-item" key={index}>
-          <div ref={el => contadorRefs.current[index] = el} style={{ fontSize: '2rem', color: '#333' }}></div>
+          <div
+            ref={el => contadorRefs.current[index] = el}
+            style={{ fontSize: '2rem', color: '#333' }}
+          ></div>
           <p>{contador.label}</p>
         </div>
       ))}
