@@ -26,11 +26,12 @@ h1 {
   color: #f0f0f0;
 }
 
-/* Botão para alternar tema */
+/* Botão para alternar tema - centralizado na parte inferior */
 .toggle-theme {
-  position: fixed; /* Fixa o botão no canto superior direito */
-  top: 20px;
-  right: 20px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta para manter o botão centralizado */
   padding: 8px 12px;
   font-size: 14px;
   background-color: #007bff;
@@ -38,10 +39,11 @@ h1 {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  z-index: 1000; /* Certifica-se de que o botão fica acima de outros elementos */
+  z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
+
 
 .toggle-theme:hover {
   background-color: #0056b3;
