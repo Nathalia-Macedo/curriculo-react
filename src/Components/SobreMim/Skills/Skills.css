@@ -3,13 +3,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  width: 100%;
-  overflow: hidden; /* Evita overflow horizontal */
+  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  overflow-x: hidden; /* Evita qualquer overflow horizontal */
 }
 
 .skills h2 {
   color: black;
+  text-align: center; /* Garante que o título fique centralizado */
 }
 
 .skills-list {
@@ -22,29 +22,32 @@
 .slick-slider {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .slick-track {
   display: flex;
   justify-content: center;
+  width: 100%; /* Garante que o track ocupe 100% */
 }
 
 .skill-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Centraliza o conteúdo */
+  justify-content: center; /* Centraliza verticalmente */
   text-align: center;
-  padding: 10px; /* Espaçamento interno */
+  padding: 10px;
   transition: transform 0.3s;
   cursor: pointer;
   box-sizing: border-box; /* Garante que o padding e margin sejam considerados no tamanho total */
+  max-width: 100%; /* Limita a largura para não quebrar o layout */
 }
 
 .skill-image {
   width: 60px;
   height: 60px;
-  margin-bottom: 10px; /* Maior espaçamento entre imagem e texto */
+  margin-bottom: 10px;
 }
 
 .skill-info {
@@ -52,11 +55,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 30px;
+  justify-content: center;
+  text-align: center;
 }
 
-.skill-item:hover {
-  transform: scale(1.05); /* Efeito de zoom suave no hover */
+/* Ajustes para telas menores (mobile) */
+@media screen and (max-width: 600px) {
+  .skills {
+    padding: 10px;
+  }
+
+  .skills-list {
+    max-width: 100%; /* Garante que a lista ocupe 100% da tela no mobile */
+  }
+
+  .slick-track {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem conforme o espaço disponível */
+  }
+
+  .skill-item {
+    width: 100%; /* Ocupa toda a largura da tela no mobile */
+    max-width: 100%; /* Evita que o item ultrapasse a largura disponível */
+    padding: 5px;
+  }
+
+  .skill-info {
+    align-items: center; /* Centraliza no mobile */
+    justify-content: center; /* Centraliza verticalmente no mobile */
+    text-align: center;
+  }
 }
 
 /* Ajustes para os pontinhos de navegação do carrossel */
