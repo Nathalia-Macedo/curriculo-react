@@ -1,32 +1,68 @@
 .timeline-container {
     position: relative; /* Para posicionar os elementos dentro */
-  }
-  
-/* Linha central padrão, preta para o tema claro com maior especificidade */
-.timeline-container .VerticalTimeline {
-    border-left: 2px solid black; /* Linha central preta para o tema claro */
-  }
-  
-  /* Altera a linha central para branca quando o tema é escuro */
-  [data-tema='escuro'] .timeline-container .VerticalTimeline {
-    border-left: 2px solid white; /* Linha central branca no tema escuro */
-  }
-  
-  
-  /* Estilo dos eventos da linha do tempo */
-  .vertical-timeline-element-title {
-    font-weight: bold;
-  }
-  
+}
 
-  
-  /* Opções de fonte e espaçamento para o conteúdo */
-  .vertical-timeline-element-content {
+/* Linha central padrão, preta para o tema claro */
+.vertical-timeline.vertical-timeline--two-columns:before {
+    background: black; /* Linha central preta para o tema claro */
+}
+
+/* Altera a linha central para branca quando o tema é escuro */
+[data-tema='escuro'] .vertical-timeline.vertical-timeline--two-columns:before {
+    background: white; /* Linha central branca no tema escuro */
+}
+
+/* Estilo dos eventos da linha do tempo */
+.vertical-timeline-element-title {
+    font-weight: bold;
+}
+
+/* Opções de fonte e espaçamento para o conteúdo */
+.vertical-timeline-element-content {
     padding: 10px; /* Espaçamento interno */
-  }
-  
-  /* Adiciona transições para a linha central, se desejado */
-  .VerticalTimeline {
-    transition: border-color 0.3s ease; /* Transição suave ao mudar de tema */
-  }
-  
+}
+
+/* Adiciona transições para a linha central, se desejado */
+.vertical-timeline.vertical-timeline--two-columns:before {
+    transition: background 0.3s ease; /* Transição suave ao mudar de tema */
+}
+
+/* Estilo do conteúdo do elemento da linha do tempo */
+.vertical-timeline-element-content {
+    background-color: #fff; /* Fundo branco para o tema claro */
+    color: #333; /* Texto escuro para contraste no tema claro */
+}
+
+/* Estilo adicional para o tema escuro */
+[data-tema='escuro'] .vertical-timeline-element-content {
+    background-color: #1d1515; /* Fundo escuro para o tema escuro */
+    color: #ddd; /* Texto claro para contraste no tema escuro */
+}
+
+/* Estilos das bolinhas na linha do tempo para o tema claro */
+[data-tema='claro'] .vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
+    background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Gradiente do roxo para o azul claro */
+    border-radius: 50%; /* Faz as bolinhas serem circulares */
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: 50px; /* Ajuste o tamanho conforme necessário */
+    display: flex; /* Para centralizar qualquer conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Estilos das bolinhas na linha do tempo para o tema escuro */
+[data-tema='escuro'] .vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
+    background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Aplicando o mesmo gradiente no tema escuro */
+    opacity: 0.8; /* Ajuste a opacidade se desejar um efeito diferente */
+    border-radius: 50%; /* Faz as bolinhas serem circulares */
+    width: 50px; /* Ajuste o tamanho conforme necessário */
+    height: 50px; /* Ajuste o tamanho conforme necessário */
+    display: flex; /* Para centralizar qualquer conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Transição suave ao mudar de tema */
+.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
+    transition: background 0.3s ease, opacity 0.3s ease; /* Suaviza a mudança de cor e opacidade */
+}

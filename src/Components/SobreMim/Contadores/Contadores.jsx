@@ -52,13 +52,16 @@ const Contadores = () => {
 
   const contadoresParaExibir = mostrarTodos || !isMobile ? contadorDados : contadorDados.slice(0, 5);
 
+  // Obtenha o tema atual (supondo que você tenha uma lógica para isso)
+  const tema = document.documentElement.getAttribute('data-tema');
+
   return (
-    <div className="contador-container">
+    <div className={`contador-container ${tema}`}>
       {contadoresParaExibir.map((contador, index) => (
         <div className="contador-item" key={index}>
           <div
             ref={el => contadorRefs.current[index] = el}
-            style={{ fontSize: '2rem', color: '#333' }}
+            className="contador-numeros"
           ></div>
           <p>{contador.label}</p>
         </div>

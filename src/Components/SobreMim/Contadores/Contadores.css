@@ -6,12 +6,20 @@
   max-width: 1200px;
   margin: 0 auto;
   gap: 20px;
-  background: linear-gradient(to right, #ece9e6, #ffffff); /* Gradiente de fundo */
   border-radius: 15px; /* Bordas arredondadas */
+  transition: background 0.3s ease; /* Suaviza a transição de fundo */
+}
+
+.contador-container.claro {
+  background: linear-gradient(to right, #ece9e6, #ffffff); /* Gradiente de fundo claro */
+}
+
+.contador-container.escuro {
+  background: linear-gradient(to right, #1d1515, #333); /* Gradiente de fundo escuro */
 }
 
 .contador-item {
-  background: white; /* Fundo branco */
+  background: white; /* Fundo branco no tema claro */
   border-radius: 15px; /* Bordas arredondadas */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
   padding: 20px;
@@ -21,22 +29,36 @@
   transition: transform 0.3s, box-shadow 0.3s; /* Transições para hover */
 }
 
+/* Estilo dos contadores no tema escuro */
+.contador-item.escuro {
+  background: black; /* Fundo preto para o tema escuro */
+  color: white; /* Texto branco para contraste */
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.2); /* Sombra clara suave */
+}
+
 .contador-item:hover {
   transform: translateY(-5px); /* Levanta o item ao passar o mouse */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+  box-shadow: 5px 10px 15px rgba(19, 5, 5, 0.5); /* Sombra mais forte no hover */
 }
 
 .contador-numeros {
   font-size: 2.5rem; /* Tamanho maior para o contador */
   font-weight: bold; /* Negrito para o número */
-  color: #2c3e50; /* Cor do texto */
-  margin-bottom: 10px; /* Espaçamento entre o número e o rótulo */
+  color: #2c3e50; /* Cor do texto no tema claro */
+}
+
+.contador-item.escuro .contador-numeros {
+  color: white; /* Cor do texto no tema escuro */
 }
 
 .contador-item p {
   font-size: 1rem; /* Tamanho do texto do rótulo */
-  color: #7f8c8d; /* Cor do rótulo */
-  margin: 0; /* Remove margens */
+  color: #7f8c8d; /* Cor do rótulo no tema claro */
+}
+
+/* Cor do rótulo no tema escuro */
+.contador-item.escuro p {
+  color: #ddd; /* Rótulo em tom claro no tema escuro */
 }
 
 /* Estilos Responsivos */

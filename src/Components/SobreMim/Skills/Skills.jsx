@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Skills.css';
 
-const Skills = () => {
+const Skills = ({ tema }) => {
   const { textos } = useCurriculo();
   const { skillsData } = textos;
 
@@ -35,14 +35,13 @@ const Skills = () => {
   };
 
   return (
-    <section className="skills">
+    <section className={`skills ${tema}`}>
       <h2>Habilidades</h2>
       <Slider {...settings} className="skills-list">
         {skillsData.map(skill => (
           <div key={skill.id} className="skill-item">
-           
             <div className="skill-info">
-            <img src={skill.image} alt={skill.skill} className="skill-image" />
+              <img src={skill.image} alt={skill.skill} className="skill-image" />
               <h3>{skill.skill}</h3>
               <p>Nível: {skill.nivel}</p>
             </div>
