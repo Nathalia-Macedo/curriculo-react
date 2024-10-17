@@ -1,0 +1,25 @@
+.ad-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .ad-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas para o anúncio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+  }
+  
+  .ad-container img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  }
+
+  @media (max-width: 768px) {
+    .ad-container img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  

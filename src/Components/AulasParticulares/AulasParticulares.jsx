@@ -18,7 +18,7 @@ const AulasParticulares = () => {
           <strong>Professora no Superprof:</strong> Confira meus <a href="https://www.superprof.com.br/aulas-programacao-para-front-end-back-end-voltada-para-pratica.html" target="_blank" rel="noopener noreferrer">feedbacks aqui</a>.
         </p>
       
-        <a href="#contato" className="aulas-btn">Agende sua aula grátis</a>
+        <a href="https://wa.me/5571987257532" className="aulas-btn">Agende sua aula grátis</a>
       </div>
     </section>
   );
