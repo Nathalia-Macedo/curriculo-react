@@ -26,28 +26,27 @@ h1 {
   color: #f0f0f0;
 }
 
-/* Botão para alternar tema - centralizado na parte inferior */
+/* Botão para alternar tema - canto inferior direito */
 .toggle-theme {
-  position: fixed;
-  bottom: 20px;
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta para manter o botão centralizado */
-  padding: 8px 12px;
-  font-size: 14px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
+  position: fixed; /* Mantém o botão fixo na tela */
+  bottom: 20px; /* Distância do fundo da tela */
+  right: 20px; /* Distância do lado direito da tela */
+  padding: 8px 12px; /* Espaçamento interno do botão */
+  font-size: 25px; /* Tamanho da fonte */
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda padrão */
+  border-radius: 50px; /* Cantos arredondados */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra do botão */
+  transition: background-color 0.3s ease; /* Transição suave na mudança de cor */
 }
-
 
 .toggle-theme:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Cor do botão ao passar o mouse */
 }
+
 
 /* Ajuste para responsividade */
 @media (max-width: 768px) {

@@ -16,7 +16,7 @@ const Home = () => {
       
       {/* Botão para alternar tema */}
       <button className="toggle-theme" onClick={alternarTema}>
-        {tema === 'claro' ? '🌙 Escuro' : '☀️ Claro'}
+        {tema === 'claro' ? '🌙 ' : '☀️ '}
       </button>
       
       <SobreMim />
