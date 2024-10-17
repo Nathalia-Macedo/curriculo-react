@@ -4,6 +4,7 @@ import CSS from '../Assets/CSS.png'
 import REACT from '../Assets/React.png'
 import JS from '../Assets/JS.png'
 import NODE from '../Assets/NODE.png'
+import TS from '../Assets/Typescript.svg.png'
 // Criar o contexto
 const CurriculoContext = createContext();
 
@@ -78,6 +79,8 @@ export const CurriculoProvider = ({ children }) => {
       { id: 3, skill: "CSS", nivel: "Intermediário", image: CSS },
       { id: 4, skill: "HTML", nivel: "Avançado", image: HTML },
       { id: 5, skill: "Node.js", nivel: "Intermediário", image: NODE },
+      { id: 6, skill: "Typescript", nivel: "Intermediário", image: TS },
+      { id: 7, skill: "SQL", nivel: "Intermediário", image: TS },
     ]
   });
 
