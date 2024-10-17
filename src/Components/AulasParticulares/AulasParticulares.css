@@ -1,0 +1,205 @@
+/* Seção de Aulas Particulares */
+#aulasparticulares {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #aulasparticulares::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    z-index: 1;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(30px) translateX(30px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
+  .aulas-content {
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .aulas-descricao {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  
+  .aulas-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .aulas-beneficios li {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .aulas-beneficios li:hover {
+    transform: scale(1.05);
+  }
+  
+  .superprof-info {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+  
+  .superprof-info a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .superprof-info a:hover {
+    color: #fff;
+  }
+  
+  .feedbacks {
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-item {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    animation: fadeInUp 1s ease-in-out forwards;
+  }
+  
+  .feedback-item:last-child {
+    border-bottom: none;
+  }
+  
+  .feedback-item p {
+    font-style: italic;
+    margin: 0;
+  }
+  
+  .feedback-item span {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .aulas-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffd700;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    margin-top: 30px;
+  }
+  
+  .aulas-btn:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .aulas-descricao {
+      font-size: 1.2rem;
+    }
+  
+    .aulas-beneficios {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .aulas-beneficios li {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+  
+    .feedbacks {
+      padding: 20px;
+    }
+  
+    .aulas-btn {
+      padding: 12px 25px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.7rem;
+    }
+  
+    .aulas-descricao {
+      font-size: 1rem;
+    }
+  
+    .aulas-beneficios {
+      margin: 20px 0;
+    }
+  
+    .aulas-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  

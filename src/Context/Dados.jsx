@@ -5,6 +5,11 @@ import REACT from '../Assets/React.png'
 import JS from '../Assets/JS.png'
 import NODE from '../Assets/NODE.png'
 import TS from '../Assets/Typescript.svg.png'
+import NEXT from '../Assets/next.png'
+import SELENIUM from '../Assets/selenium.png'
+import GIT from '../Assets/git.png'
+import GITHUB from '../Assets/GITHUB.png'
+import PYTHON from '../Assets/Py.png'
 // Criar o contexto
 const CurriculoContext = createContext();
 
@@ -80,7 +85,11 @@ export const CurriculoProvider = ({ children }) => {
       { id: 4, skill: "HTML", nivel: "Avançado", image: HTML },
       { id: 5, skill: "Node.js", nivel: "Intermediário", image: NODE },
       { id: 6, skill: "Typescript", nivel: "Intermediário", image: TS },
-      { id: 7, skill: "SQL", nivel: "Intermediário", image: TS },
+      { id: 7, skill: "Next JS", nivel: "Intermediário", image: NEXT },
+      { id: 8, skill: "Selenium", nivel: "Intermediário", image: SELENIUM },
+      { id: 9, skill: "GIT", nivel: "Intermediário", image: GIT },
+      { id: 10, skill: "GitHub", nivel: "Intermediário", image: GITHUB },
+      { id: 11, skill: "Python", nivel: "Intermediário", image: PYTHON },
     ]
   });
 

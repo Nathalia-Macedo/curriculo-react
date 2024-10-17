@@ -2,6 +2,7 @@
 import './Home.css'
 import React from 'react';
 import { useCurriculo } from '../../Context/Dados';
+import AulasParticulares from '../../Components/AulasParticulares/AulasParticulares';
 // import Experiencias from '../../Components/EXP/Exp';
 import Contato from '../../Components/Contato/Contato';
 import Header from '../../Components/Header/Header';
@@ -21,6 +22,7 @@ const Home = () => {
         <ProjectCard key={projeto.id} projeto={projeto} />
       ))}
     </div>
+    <AulasParticulares/>
       {/* <div className='session'>
         <Experiencias/>
     </div> */}
