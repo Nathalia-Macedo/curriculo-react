@@ -3,12 +3,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%; /* Certifica-se de que o container ocupe toda a largura */
+}
+
+.skills h2{
+  color: black;
 }
 
 .skills-list {
-  display: flex;
   width: 100%;
-  max-width: 1300px; /* Define uma largura máxima para o carrossel */
+  max-width: 1300px; /* Limita o tamanho máximo do carrossel */
+}
+
+.slick-slider {
+  display: flex;
+  justify-content: center; /* Centraliza o carrossel */
+}
+
+.slick-track {
+  display: flex;
+  justify-content: center; /* Garante que os itens no carrossel sejam centralizados */
 }
 
 .skill-item {
@@ -22,17 +36,20 @@
   cursor: pointer;
 }
 
-
-
-
 .skill-image {
   width: 60px;
   height: 60px;
   margin-bottom: 5px;
 }
 
+
+
+
 .skill-info {
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skill-item:hover {

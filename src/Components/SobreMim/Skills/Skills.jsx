@@ -12,12 +12,12 @@ const Skills = () => {
   // Configurações do carrossel
   const settings = {
     dots: true, // Mostra os pontinhos de navegação
-    infinite: false, // Loop infinito
+    infinite: true, // Loop infinito
     speed: 500, // Velocidade de transição
     slidesToShow: 3, // Número de slides visíveis ao mesmo tempo
     slidesToScroll: 1, // Quantos slides mover por vez
     autoplay: true, // Ativa o autoplay
-    autoplaySpeed: 3000, // Tempo entre as trocas automáticas
+    autoplaySpeed: 2000, // Tempo entre as trocas automáticas
     responsive: [
       {
         breakpoint: 900,
@@ -40,8 +40,9 @@ const Skills = () => {
       <Slider {...settings} className="skills-list">
         {skillsData.map(skill => (
           <div key={skill.id} className="skill-item">
-            <img src={skill.image} alt={skill.skill} className="skill-image" />
+           
             <div className="skill-info">
+            <img src={skill.image} alt={skill.skill} className="skill-image" />
               <h3>{skill.skill}</h3>
               <p>Nível: {skill.nivel}</p>
             </div>
