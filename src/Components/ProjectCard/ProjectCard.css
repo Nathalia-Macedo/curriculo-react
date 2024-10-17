@@ -16,6 +16,24 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
 }
+/* Contadores.css */
+
+.mostrar-mais-button,
+.mostrar-menos-button {
+  margin-top: 20px; /* Espaço acima do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  background-color: #007bff; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  border: none; /* Remove bordas */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: background-color 0.3s; /* Efeito de transição */
+}
+
+.mostrar-mais-button:hover,
+.mostrar-menos-button:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
 
 /* Animação ao passar o mouse no card */
 .project-card:hover {

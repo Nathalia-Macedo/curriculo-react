@@ -15,7 +15,7 @@ const Home = () => {
     <>
     <Header/>
     <SobreMim/>
-    <h1>Meus Projetos</h1>
+    <h1 id="projetos">Meus Projetos</h1>
      <div className='session'>
      
       {textos.projetos.map(projeto => (

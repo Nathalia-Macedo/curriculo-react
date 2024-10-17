@@ -1,0 +1,29 @@
+/* Timeline.css */
+.timeline-container {
+    position: relative;
+    padding: 50px 20px;
+    overflow: hidden;
+    z-index: 0; /* Coloca o conteúdo acima do fundo */
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(0, 123, 255, 0.5));
+    transform: translate(-50%, -50%);
+    animation: rotate 20s linear infinite; /* Animação de rotação */
+    z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+
+@keyframes rotate {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
