@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 import HTML from '../Assets/HTML.png'
 import CSS from '../Assets/CSS.png'
 import REACT from '../Assets/React.png'
@@ -92,6 +92,22 @@ export const CurriculoProvider = ({ children }) => {
     ]
   });
 
+    // Estado do tema
+    const [tema, setTema] = useState(() => localStorage.getItem('tema') || 'claro');
+
+    // Função para alternar o tema entre claro e escuro
+    const alternarTema = () => {
+      const novoTema = tema === 'claro' ? 'escuro' : 'claro';
+      setTema(novoTema);
+      localStorage.setItem('tema', novoTema); // Salva a preferência no localStorage
+    };
+  
+    // Efeito para aplicar o tema ao document root
+    useEffect(() => {
+      document.documentElement.setAttribute('data-tema', tema); // Define o atributo no HTML
+    }, [tema]);
+  
+
   function gerarId(lista) {
     if (lista.length === 0) return 1;
     return lista[lista.length - 1].id + 1;
@@ -178,7 +194,9 @@ export const CurriculoProvider = ({ children }) => {
       atualizarContador,
       adicionarSkill,
       removerSkill,
-      atualizarSkill
+      atualizarSkill,
+      tema,
+      alternarTema
     }}>
       {children}
     </CurriculoContext.Provider>

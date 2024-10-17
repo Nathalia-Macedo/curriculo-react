@@ -6,6 +6,7 @@
     z-index: 0; /* Coloca o conteúdo acima do fundo */
 }
 
+/* Estilo para o tema claro */
 .timeline-container::before {
     content: '';
     position: absolute;
@@ -13,10 +14,26 @@
     left: 50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(0, 123, 255, 0.5));
     transform: translate(-50%, -50%);
     animation: rotate 20s linear infinite; /* Animação de rotação */
     z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+
+/* Estilo para o tema escuro */
+.timeline-container.escuro {
+    background-color: #121212; /* Fundo escuro para a linha do tempo */
+}
+
+.timeline-container.escuro::before {
+    background: linear-gradient(45deg, rgba(50, 50, 50, 0.5), rgba(0, 123, 255, 0.5)); /* Gradiente para o tema escuro */
+}
+
+.timeline-container.escuro .vertical-timeline-element-title {
+    color: #f0f0f0; /* Cor do título no tema escuro */
+}
+
+.timeline-container.escuro p {
+    color: #e0e0e0; /* Cor do texto no tema escuro */
 }
 
 @keyframes rotate {
