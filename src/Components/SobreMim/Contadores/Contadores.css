@@ -1,50 +1,56 @@
-/* Contador.css */
 .contador-container {
-    display: flex;
-    flex-wrap: wrap; /* Para permitir que os itens se ajustem em várias linhas */
-    justify-content: space-around; /* Distribui os itens de forma equilibrada */
-    padding: 20px;
-    max-width: 1200px; /* Limita a largura máxima do container */
-    margin: 0 auto; /* Centraliza o container na página */
-    gap: 20px; /* Espaçamento entre os itens */
-  }
-  
-  .contador-item {
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 20px;
-    text-align: center; /* Centraliza o texto dentro do contador */
-    flex: 1 1 200px; /* Flexível: ocupa o espaço mínimo de 200px e se expande */
-    min-width: 200px; /* Largura mínima para cada contador */
-  }
-  
-  .contador-item div {
-    font-size: 2rem; /* Tamanho da fonte do contador */
-    font-weight: bold; /* Negrito para o número */
-    color: #2c3e50; /* Cor do texto */
-    margin-bottom: 10px; /* Espaçamento entre o número e o rótulo */
-  }
-  
-  .contador-item p {
-    font-size: 1rem; /* Tamanho da fonte do rótulo */
-    color: #7f8c8d; /* Cor do rótulo */
-    margin: 0; /* Remove margens */
-  }
-  
-  /* Estilos Responsivos */
-  @media (max-width: 768px) {
-    .contador-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  background: linear-gradient(to right, #ece9e6, #ffffff); /* Gradiente de fundo */
+  border-radius: 15px; /* Bordas arredondadas */
+}
+
+.contador-item {
+  background: white; /* Fundo branco */
+  border-radius: 15px; /* Bordas arredondadas */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 200px; /* Flexível: ocupa o espaço mínimo de 200px */
+  min-width: 250px; /* Largura mínima para cada contador */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transições para hover */
+}
+
+.contador-item:hover {
+  transform: translateY(-5px); /* Levanta o item ao passar o mouse */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+}
+
+.contador-numeros {
+  font-size: 2.5rem; /* Tamanho maior para o contador */
+  font-weight: bold; /* Negrito para o número */
+  color: #2c3e50; /* Cor do texto */
+  margin-bottom: 10px; /* Espaçamento entre o número e o rótulo */
+}
+
+.contador-item p {
+  font-size: 1rem; /* Tamanho do texto do rótulo */
+  color: #7f8c8d; /* Cor do rótulo */
+  margin: 0; /* Remove margens */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .contador-container {
       padding: 10px; /* Menos padding em telas menores */
-    }
-  
-    .contador-item {
+  }
+
+  .contador-item {
       flex: 1 1 150px; /* Ajusta o tamanho dos contadores em telas menores */
       padding: 15px; /* Menos padding em contadores menores */
-    }
-  
-    .contador-item div {
-      font-size: 1.5rem; /* Tamanho da fonte menor em telas menores */
-    }
   }
-  
+
+  .contador-numeros {
+      font-size: 2rem; /* Tamanho da fonte menor em telas menores */
+  }
+}

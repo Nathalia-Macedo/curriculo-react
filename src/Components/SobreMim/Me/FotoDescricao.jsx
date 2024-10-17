@@ -1,4 +1,3 @@
-// FotoEDescricao.js
 import React from 'react';
 import './FotoDescricao.css';
 

@@ -1,27 +1,33 @@
-/* Sessão principal que contém os projetos e as experiências */
-
-h1{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 30px; /* Espaçamento inferior do título */
 }
+
 .session {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas pequenas */
-    justify-content: center; /* Centraliza os itens dentro da sessão */
-    gap: 20px; /* Espaço entre os cards */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px; /* Aumenta o espaçamento inferior para separar as seções */
+  padding: 60px; /* Adiciona padding para espaçamento interno */
+}
+
+/* Aumentando o espaçamento entre os cards e a sessão abaixo (Aulas Particulares) */
+.session + .aulasParticulares {
+  margin-top: 60px; /* Aumenta a distância entre os projetos e as aulas particulares */
+}
+
+/* Ajuste para responsividade */
+@media (max-width: 768px) {
+  .session {
+      align-items: center;
   }
-  
-  /* Ajuste para responsividade */
-  @media (max-width: 768px) {
-    .session {
-      align-items: center; /* Centraliza os itens */
-    }
+}
+
+/* Para telas muito pequenas (mobile) */
+@media (max-width: 480px) {
+  .session {
+      padding: 20px; /* Mantém um padding mais largo em telas pequenas */
   }
-  
-  /* Para telas muito pequenas (mobile) */
-  @media (max-width: 480px) {
-    .session {
-      padding: 10px; /* Adiciona um padding para dar espaçamento nas laterais */
-    }
-  }
-  
+}

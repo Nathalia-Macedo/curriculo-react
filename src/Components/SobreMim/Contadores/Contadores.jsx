@@ -12,12 +12,10 @@ const Contadores = () => {
     { label: 'Projetos Completados', valor: textos.contadorDados.projetosCompletados },
     { label: 'Aulas Ministradas', valor: textos.contadorDados.aulasMinistradas },
     { label: 'Alunos Atendidos', valor: textos.contadorDados.alunosAtendidos },
-    { label: 'Horas de Aula Ministradas', valor: textos.contadorDados.horasDeAulaMinistradas },
     { label: 'Conteúdos Criados', valor: textos.contadorDados.conteudosCriados },
     { label: 'Workshops Realizados', valor: textos.contadorDados.workshopsRealizados },
-    { label: 'Interações nas Redes Sociais', valor: textos.contadorDados.interacoesRedesSociais },
     { label: 'Estudantes em Tutoria', valor: textos.contadorDados.estudantesEmTutoria },
-    { label: 'Lives Realizadas', valor: textos.contadorDados.livesRealizadas },
+    { label: 'Lives Realizadas', valor: textos.contadorDados.livesRealizadas }
   ], [textos]); // Dependência para recalcular quando textos mudar
 
   useEffect(() => {
