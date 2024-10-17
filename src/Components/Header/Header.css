@@ -1,5 +1,4 @@
 /* Estilos principais para o header */
-
 html {
   scroll-behavior: smooth;
 }
@@ -64,6 +63,38 @@ html {
   font-size: 1.8rem;
   cursor: pointer;
   color: #fff; /* Cor do ícone hambúrguer */
+  z-index: 3; /* Z-index mais alto para aparecer acima do menu */
+}
+
+.hamburger.open {
+  content: '\00d7'; /* Troca para o símbolo "X" quando o menu está aberto */
+  font-size: 2rem;
+}
+
+/* Animação de fundo para a navegação móvel */
+.nav-background::before {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: floatUp 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-30px) translateX(-30px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
 }
 
 /* Responsividade */
@@ -76,21 +107,45 @@ html {
     display: flex; /* Mostrar links quando o menu estiver aberto */
     flex-direction: column; /* Empilhar links verticalmente */
     position: absolute; /* Posicionamento absoluto */
-    top: 60px; /* Abaixo do header */
-    right: 0; /* Alinhamento à direita */
-    background-color:black;
-  
-    /* background: linear-gradient(135deg, #6e45e2, #88d3ce); Gradiente do roxo para verde água */
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Gradiente do roxo para verde água */
     width: 100%; /* Largura total */
-    height: auto; /* Altura automática para o conteúdo */
-    justify-content: flex-start; /* Alinhamento dos itens ao topo */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    gap: 20px; /* Espaçamento entre os links */
-    transition: transform 0.3s ease; /* Transição suave */
+    height: 100vh; /* Tela inteira */
+    justify-content: center; /* Centraliza os links na vertical */
+    align-items: center; /* Centraliza os links na horizontal */
+    z-index: 2;
+    overflow: hidden; /* Para garantir que a animação de fundo não quebre o layout */
   }
 
   .hamburger {
     display: block; /* Exibir o ícone de menu hambúrguer */
+    z-index: 3; /* Para que ele fique acima do menu aberto */
+  }
+
+  .hamburger.open {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem; /* Maior para facilitar o toque */
+    color: white; /* Mantém branco para contraste */
+    cursor: pointer;
+  }
+
+  /* Animação de descida dos links */
+  .nav-links.open li {
+    animation: slideDown 0.5s ease forwards; /* Adiciona animação para os links */
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -100,7 +155,6 @@ html {
     font-size: 1.3rem; /* Aumentar o tamanho dos textos e ícones em telas muito pequenas */
     width: 100%; /* Para que cada link ocupe a largura total */
     text-align: center; /* Centraliza o texto do link */
-    
   }
 
   .nav-links.open ul {
