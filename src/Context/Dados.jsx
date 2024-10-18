@@ -11,6 +11,7 @@ import GIT from '../Assets/git.png';
 import GITHUB from '../Assets/GITHUB.png';
 import PYTHON from '../Assets/Py.png';
 
+
 // Criar o contexto
 const CurriculoContext = createContext();
 
@@ -24,6 +25,9 @@ export const CurriculoProvider = ({ children }) => {
       { id: 1, nome_do_projeto: "Choco-Bytes", descricao_do_projeto: "A CHocoBytes foi desenvolvida em um workshop ministrado por mim na Infinity School. É uma simulação de loja de doces, com catálogo, favoritos, carrinho, todas as informações sendo guardadas no LocalStorage!", link_do_projeto: "https://choco-bytes.vercel.app/" },
       { id: 2, nome_do_projeto: "Gerador de QR Code", descricao_do_projeto: "Foi um dos primeiros projetos que fiz, apenas com o front. Basta adicionar o link e ele gera o QR code instantaneamente", link_do_projeto: "https://qrcode-nath.vercel.app/" },
       { id: 3, nome_do_projeto: "Compilador Javascript Online", descricao_do_projeto: "Idealizado para um workshop da Infinity School, cada aluno desenvolveu seu próprio compilador Javascript, responsivo e funcional!", link_do_projeto: "https://meu-compilador.vercel.app/" }
+      ,{ id: 4, nome_do_projeto: "App Gerador de Senhas", descricao_do_projeto: "Esse foi meu primeiro projeto com React Native, um app gerador de senhas aleatórias que usa o Async Storage para guardar as informações!", link_do_projeto: "https://github.com/Nathalia-Macedo/App-Gerador-de-Senhas" },
+      { id: 5, nome_do_projeto: "Site de Rock", descricao_do_projeto: "Site criado em workshop ministrado na Infinity School, no mês do rock", link_do_projeto: "https://rocksessions.vercel.app/" },
+      { id: 6, nome_do_projeto: "Site Básico ensinando programação", descricao_do_projeto: "Minha fantasia de Halloween do ano passado me custou 25 reais, eu imprimi uma plaquinha plastificada escrito 404 not found, fantasia não encontrada! Divulguei meu instagram e um joguinho básico ensinando programação", link_do_projeto: "https://programming-nath.vercel.app/" }
     ],
     experiencias: [
       {

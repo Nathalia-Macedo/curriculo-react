@@ -1,6 +1,6 @@
 // Header.js
 import React, { useState } from "react";
-import { FaBars, FaTimes, FaUserTie, FaEnvelope, FaCode, FaGraduationCap, FaUser, FaChalkboardTeacher, FaBook } from 'react-icons/fa';
+import { FaBars, FaTimes, FaUserTie, FaEnvelope, FaCode, FaGraduationCap, FaUser, FaChalkboardTeacher } from 'react-icons/fa';
 import "./Header.css";
 
 function Header() {
@@ -31,11 +31,6 @@ function Header() {
             <li>
               <a href="#aulasparticulares" onClick={toggleMenu}>
                 <FaChalkboardTeacher className="nav-icon" /> Aulas Particulares
-              </a>
-            </li>
-            <li>
-              <a href="#conteudos" onClick={toggleMenu}>
-                <FaBook className="nav-icon" /> Conteúdos
               </a>
             </li>
             <li>
