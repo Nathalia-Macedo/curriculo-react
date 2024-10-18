@@ -1,11 +1,12 @@
 import React from 'react';
-import './Galery.css';
+import './Galery.css'; // Importando o CSS da galeria
 
+// Função para importar automaticamente todas as imagens da pasta
 function importAll(r) {
   return r.keys().map(r);
 }
 
-const images = importAll(require.context('../../Assets/images', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../../Assets/images', false, /\.(png|jpe?g|svg)$/)); // Mude o caminho para a pasta onde estão suas imagens
 
 const Gallery = () => {
   return (

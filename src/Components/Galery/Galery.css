@@ -1,54 +1,67 @@
-/* Gallery.css */
+/* Container principal da galeria */
 .gallery-container {
-    max-width: 800px; /* Limite de largura para desktops */
-    margin: 0 auto; /* Centraliza a galeria */
     padding: 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-  }
-  
-  .thank-you-message {
-    margin-bottom: 10px; /* Reduz espaço abaixo da mensagem */
   }
   
   .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Mínimo de 200px por coluna */
-    gap: 10px; /* Espaçamento entre os itens da grade */
+    column-count: 3; /* Número de colunas em desktops */
+    column-gap: 15px; /* Espaçamento entre as colunas */
   }
   
-  .gallery-item img {
-    width: 100%; /* Imagem ocupa toda a largura do item */
-    height: auto; /* Mantém a proporção da imagem */
+  /* Estilo para os itens da galeria */
+  .gallery-item {
+    break-inside: avoid; /* Evita que os itens quebrem dentro das colunas */
+    margin-bottom: 15px; /* Espaçamento entre as imagens */
+    position: relative;
+    overflow: hidden;
     border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
   }
   
-  /* Limite de altura para imagens verticais */
+  /* Diminuindo o tamanho das imagens */
   .gallery-item img {
-    max-height: 300px; /* Ajuste conforme necessário para imagens verticais */
+    width: 95%; /* Ajuste a largura para ocupar menos espaço */
+    height: auto; /* Mantém a proporção das imagens */
+    display: block;
+    transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
   }
   
-  /* Responsividade */
+  /* Efeito de zoom ao passar o mouse */
+  .gallery-item:hover img {
+    transform: scale(1.05); /* Efeito de zoom nas imagens ao passar o mouse */
+  }
+  
+  /* Responsividade para tablets */
+  @media (max-width: 1024px) {
+    .gallery {
+      column-count: 2; /* Diminui o número de colunas em tablets */
+      column-gap: 10px;
+    }
+  }
+  
+  /* Responsividade para dispositivos móveis */
   @media (max-width: 768px) {
-    .gallery-container {
-      padding: 10px; /* Menos padding em telas menores */
-    }
-    
-    .thank-you-message h1 {
-      font-size: 1.5rem; /* Tamanho da fonte reduzido para títulos em telas pequenas */
+    .gallery {
+      column-count: 1; /* Apenas uma coluna em dispositivos móveis */
+      column-gap: 0;
     }
   
-    .thank-you-message p {
-      font-size: 1rem; /* Tamanho da fonte reduzido para texto em telas pequenas */
+    .gallery-item {
+      margin-bottom: 10px;
     }
   }
   
-  @media (max-width: 480px) {
-    .thank-you-message h1 {
-      font-size: 1.2rem; /* Tamanho ainda menor para dispositivos móveis */
-    }
+  /* Estilo para a mensagem de agradecimento */
+  .thank-you-message {
+    margin-bottom: 20px; /* Espaço abaixo da mensagem */
+    text-align: center; /* Centraliza o texto */
+  }
   
-    .thank-you-message p {
-      font-size: 0.9rem; /* Tamanho ainda menor para texto em dispositivos móveis */
-    }
+  .thank-you-message h1 {
+    font-size: 1.8rem; /* Tamanho do título */
+  }
+  
+  .thank-you-message p {
+    font-size: 1rem; /* Tamanho do texto */
   }
   
