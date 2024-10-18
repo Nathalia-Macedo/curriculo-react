@@ -97,7 +97,24 @@ html {
   }
 }
 
-/* Responsividade */
+/* Responsividade para tablets e dispositivos móveis */
+
+/* Ajustes para tablets (telas entre 769px e 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .nav-links {
+    gap: 30px; /* Aumentar o espaçamento entre os links */
+  }
+
+  .nav-links a {
+    font-size: 1.2rem; /* Aumentar o tamanho da fonte para melhor visualização */
+  }
+
+  .hamburger {
+    display: block; /* Mostrar o ícone de menu hambúrguer */
+  }
+}
+
+/* Ajustes para dispositivos móveis e tablets pequenos (telas de até 768px) */
 @media (max-width: 768px) {
   .nav-links {
     display: none; /* Esconde os links por padrão em telas menores */
@@ -116,6 +133,13 @@ html {
     align-items: center; /* Centraliza os links na horizontal */
     z-index: 2;
     overflow: hidden; /* Para garantir que a animação de fundo não quebre o layout */
+  }
+
+  .nav-links.open ul {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
   }
 
   .hamburger {
@@ -149,7 +173,7 @@ html {
   }
 }
 
-/* Para telas muito pequenas (dispositivos móveis) */
+/* Ajustes para dispositivos móveis muito pequenos (até 480px) */
 @media (max-width: 480px) {
   .nav-links a {
     font-size: 1.3rem; /* Aumentar o tamanho dos textos e ícones em telas muito pequenas */

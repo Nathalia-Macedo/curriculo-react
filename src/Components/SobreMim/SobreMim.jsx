@@ -14,16 +14,16 @@ const SobreMim = () => {
                     <>
                         ✨ Quem sou eu?<br/><br/>
 
-E aí! Sou Nathalia, uma apaixonada pela programação e uma criadora de conteúdo que adora compartilhar tudo sobre tecnologia! 🚀
+E aí! Meu nome é Nath, tenho 22 anos, sou de Salvador Bahia e fui de vendedora ambulante a programadora e professora de programação Front End 🚀
 <br/><br/>
 
 💻 O que eu faço?<br/><br/>
 
-Estou sempre ativa: criando conteúdo no meu Instagram, trabalhando na Hotmart e ministrando workshops na Infinity School. Amo ajudar a galera a se aventurar nesse mundo incrível da programação! 🌟
+Não sei ficar quieta! Crio conteúdo no instagram, também tenho conteúdos publicados na Hotmart, ministro workshops na Infinity School, sou professora particular de programação, e presto consultoria para iniciantes na área 🌟
 <br/><br/>
-❤️ Minhas paixões<br/><br/>
+❤️ Meu diferencial<br/><br/>
 
-Quando não estou codificando, você pode me encontrar na academia, buscando sempre crescer e aprender mais! 💪📚
+Nas minhas aulas vocês aprendem programação de forma leve, divertida, como uma conversa produtiva 💪📚
                     </>
                 }
             />

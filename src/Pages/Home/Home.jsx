@@ -6,14 +6,13 @@ import Contato from '../../Components/Contato/Contato';
 import Header from '../../Components/Header/Header';
 import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 import SobreMim from '../../Components/SobreMim/SobreMim';
-
+import Gallery from '../../Components/Galery/Galery';
 const Home = () => {
   const { textos, tema, alternarTema } = useCurriculo(); // Pega o tema do contexto
 
   return (
     <div className={`home-container ${tema}`}>
       <Header />
-      
       {/* Botão para alternar tema */}
       <button className="toggle-theme" onClick={alternarTema}>
         {tema === 'claro' ? '🌙 ' : '☀️ '}
@@ -27,6 +26,7 @@ const Home = () => {
         ))}
       </div>
       <AulasParticulares />
+      <Gallery/>
       <Contato />
     </div>
   );
