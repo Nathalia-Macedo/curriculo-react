@@ -1,87 +1,54 @@
-/* Container principal que inclui o texto de agradecimento e a galeria */
+/* Gallery.css */
 .gallery-container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto; /* Centraliza o conteúdo na página */
-  }
-  
-  /* Texto de agradecimento */
-  .thank-you-message {
+    max-width: 800px; /* Limite de largura para desktops */
+    margin: 0 auto; /* Centraliza a galeria */
+    padding: 20px; /* Espaçamento interno */
     text-align: center; /* Centraliza o texto */
-    margin-bottom: 30px; /* Espaço entre o texto e a galeria */
-    color: #333; /* Cor do texto */
   }
   
-  .thank-you-message h1 {
-    font-size: 2.5rem; /* Tamanho maior para o título */
-    margin-bottom: 10px;
-    color: #2c3e50; /* Cor destacada para o título */
+  .thank-you-message {
+    margin-bottom: 10px; /* Reduz espaço abaixo da mensagem */
   }
   
-  .thank-you-message p {
-    font-size: 1.2rem; /* Tamanho do texto do parágrafo */
-    line-height: 1.6;
-    color: #555; /* Cor mais suave para o parágrafo */
-    max-width: 800px;
-    margin: 0 auto; /* Centraliza o texto dentro do parágrafo */
-  }
-  
-  /* Galeria de imagens */
   .gallery {
-    column-count: 3; /* Número de colunas em desktops */
-    column-gap: 15px; /* Espaçamento entre as colunas */
-  }
-  
-  .gallery-item {
-    break-inside: avoid; /* Evita quebras nas colunas */
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Mínimo de 200px por coluna */
+    gap: 10px; /* Espaçamento entre os itens da grade */
   }
   
   .gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
+    width: 100%; /* Imagem ocupa toda a largura do item */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada */
   }
   
-  .gallery-item:hover img {
-    transform: scale(1.05);
+  /* Limite de altura para imagens verticais */
+  .gallery-item img {
+    max-height: 300px; /* Ajuste conforme necessário para imagens verticais */
   }
   
-  /* Responsividade para tablets */
-  @media (max-width: 1024px) {
-    .gallery {
-      column-count: 2; /* Reduz para 2 colunas em tablets */
-    }
-  
-    .thank-you-message h1 {
-      font-size: 2rem;
-    }
-  
-    .thank-you-message p {
-      font-size: 1rem;
-    }
-  }
-  
-  /* Responsividade para dispositivos móveis */
+  /* Responsividade */
   @media (max-width: 768px) {
-    .gallery {
-      column-count: 1; /* Apenas uma coluna em telas pequenas */
+    .gallery-container {
+      padding: 10px; /* Menos padding em telas menores */
     }
-  
-    .gallery-item {
-      margin-bottom: 10px;
-    }
-  
+    
     .thank-you-message h1 {
-      font-size: 1.8rem;
+      font-size: 1.5rem; /* Tamanho da fonte reduzido para títulos em telas pequenas */
     }
   
     .thank-you-message p {
-      font-size: 0.9rem;
+      font-size: 1rem; /* Tamanho da fonte reduzido para texto em telas pequenas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .thank-you-message h1 {
+      font-size: 1.2rem; /* Tamanho ainda menor para dispositivos móveis */
+    }
+  
+    .thank-you-message p {
+      font-size: 0.9rem; /* Tamanho ainda menor para texto em dispositivos móveis */
     }
   }
   
