@@ -7,6 +7,7 @@ import Header from '../../Components/Header/Header';
 import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 import SobreMim from '../../Components/SobreMim/SobreMim';
 import Gallery from '../../Components/Galery/Galery';
+import Formacao from '../../Components/Formacao/Formacao';
 const Home = () => {
   const { textos, tema, alternarTema } = useCurriculo(); // Pega o tema do contexto
 
@@ -25,6 +26,7 @@ const Home = () => {
           <ProjectCard key={projeto.id} projeto={projeto} />
         ))}
       </div>
+<Formacao/>
       <AulasParticulares />
       <Gallery/>
       <Contato />

@@ -1,11 +1,10 @@
-/* Estilos principais para o header */
 html {
   scroll-behavior: smooth;
 }
 
 .header {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Gradiente do roxo para verde água */
+  background: linear-gradient(135deg, #6e45e2, #88d3ce);
   color: white;
   padding: 10px 20px;
 }
@@ -18,20 +17,19 @@ html {
 
 .logo h1 {
   font-size: 1.5rem;
-  color: #fff; /* Mantém a cor branca para o logo */
+  color: #fff;
 }
 
-/* Estilos para os links de navegação */
 .nav-links {
-  display: flex; /* Exibir links horizontalmente em telas grandes */
+  display: flex;
 }
 
 .nav-links ul {
-  list-style: none; /* Remove os marcadores da lista */
-  padding: 0; /* Remove o padding padrão */
-  margin: 0; /* Remove a margem padrão */
-  display: flex; /* Itens da lista horizontal no desktop */
-  gap: 20px; /* Espaçamento entre os links */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-links li {
@@ -40,38 +38,36 @@ html {
 }
 
 .nav-links a {
-  color: #fff; /* Cor branca para os links */
+  color: #fff;
   text-decoration: none;
   font-size: 1rem;
   display: flex;
   align-items: center;
-  gap: 5px; /* Espaçamento entre ícone e texto */
+  gap: 5px;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #ffd700; /* Dourado ao passar o mouse */
+  color: #ffd700;
 }
 
 .nav-icon {
-  font-size: 1.2rem; /* Tamanho dos ícones */
+  font-size: 1.2rem;
 }
 
-/* Estilos do ícone de menu hambúrguer */
 .hamburger {
-  display: none; /* Oculto por padrão */
+  display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #fff; /* Cor do ícone hambúrguer */
-  z-index: 3; /* Z-index mais alto para aparecer acima do menu */
+  color: #fff;
+  z-index: 3;
 }
 
 .hamburger.open {
-  content: '\00d7'; /* Troca para o símbolo "X" quando o menu está aberto */
+  content: '\00d7';
   font-size: 2rem;
 }
 
-/* Animação de fundo para a navegação móvel */
 .nav-background::before {
   content: '';
   position: absolute;
@@ -97,42 +93,38 @@ html {
   }
 }
 
-/* Responsividade para tablets e dispositivos móveis */
-
-/* Ajustes para tablets (telas entre 769px e 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .nav-links {
-    gap: 30px; /* Aumentar o espaçamento entre os links */
+    gap: 30px;
   }
 
   .nav-links a {
-    font-size: 1.2rem; /* Aumentar o tamanho da fonte para melhor visualização */
+    font-size: 1.2rem;
   }
 
   .hamburger {
-    display: block; /* Mostrar o ícone de menu hambúrguer */
+    display: block;
   }
 }
 
-/* Ajustes para dispositivos móveis e tablets pequenos (telas de até 768px) */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Esconde os links por padrão em telas menores */
+    display: none;
   }
 
   .nav-links.open {
-    display: flex; /* Mostrar links quando o menu estiver aberto */
-    flex-direction: column; /* Empilhar links verticalmente */
-    position: absolute; /* Posicionamento absoluto */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     top: 0;
     right: 0;
-    background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Gradiente do roxo para verde água */
-    width: 100%; /* Largura total */
-    height: 100vh; /* Tela inteira */
-    justify-content: center; /* Centraliza os links na vertical */
-    align-items: center; /* Centraliza os links na horizontal */
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
-    overflow: hidden; /* Para garantir que a animação de fundo não quebre o layout */
+    overflow: hidden;
   }
 
   .nav-links.open ul {
@@ -143,22 +135,21 @@ html {
   }
 
   .hamburger {
-    display: block; /* Exibir o ícone de menu hambúrguer */
-    z-index: 3; /* Para que ele fique acima do menu aberto */
+    display: block;
+    z-index: 3;
   }
 
   .hamburger.open {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 2rem; /* Maior para facilitar o toque */
-    color: white; /* Mantém branco para contraste */
+    font-size: 2rem;
+    color: white;
     cursor: pointer;
   }
 
-  /* Animação de descida dos links */
   .nav-links.open li {
-    animation: slideDown 0.5s ease forwards; /* Adiciona animação para os links */
+    animation: slideDown 0.5s ease forwards;
   }
 
   @keyframes slideDown {
@@ -173,12 +164,11 @@ html {
   }
 }
 
-/* Ajustes para dispositivos móveis muito pequenos (até 480px) */
 @media (max-width: 480px) {
   .nav-links a {
-    font-size: 1.3rem; /* Aumentar o tamanho dos textos e ícones em telas muito pequenas */
-    width: 100%; /* Para que cada link ocupe a largura total */
-    text-align: center; /* Centraliza o texto do link */
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links.open ul {

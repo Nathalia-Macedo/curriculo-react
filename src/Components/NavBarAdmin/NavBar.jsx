@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css'; // Para os estilos
+import './NavBar.css'; 
 
 const Sidebar = () => {
     return (

@@ -2,10 +2,10 @@
 import React from 'react';
 import './Contato.css';
 import { FaGithub, FaWhatsapp, FaInstagram, FaLinkedin, FaStore } from 'react-icons/fa';
-import { useCurriculo } from '../../Context/Dados'; // Importando o hook do contexto
+import { useCurriculo } from '../../Context/Dados';
 
 const Contato = () => {
-  const { tema } = useCurriculo(); // Obtendo o tema do contexto
+  const { tema } = useCurriculo();
 
   return (
     <section id="contato" className={`contato-container ${tema}`}>

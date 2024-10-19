@@ -1,15 +1,15 @@
 /* Sidebar.css */
 .sidebar {
     width: 250px;
-    height: 100vh; /* Ocupa a altura total da tela */
-    background-color: #f4f4f4; /* Cor de fundo */
+    height: 100vh;
+    background-color: #f4f4f4;
     padding: 20px;
-    position: fixed; /* Fica fixa na lateral */
+    position: fixed;
     top: 0;
     left: 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Transição suave para o efeito colapsável */
-    z-index: 1000; /* Para garantir que a sidebar fique acima do conteúdo */
+    transition: transform 0.3s ease;
+    z-index: 1000;
 }
 
 .sidebar h2 {
@@ -19,7 +19,7 @@
 }
 
 .sidebar ul {
-    list-style: none; /* Remove os marcadores da lista */
+    list-style: none;
     padding: 0;
 }
 
@@ -28,47 +28,44 @@
 }
 
 .sidebar a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #333; /* Cor do texto */
-    display: block; /* Faz o link ocupar toda a largura do item */
+    text-decoration: none;
+    color: #333;
+    display: block;
     padding: 10px;
-    border-radius: 4px; /* Bordas arredondadas */
-    transition: background 0.3s; /* Transição suave na mudança de fundo */
+    border-radius: 4px;
+    transition: background 0.3s;
 }
 
 .sidebar a:hover {
-    background-color: #e2e2e2; /* Muda a cor ao passar o mouse */
+    background-color: #e2e2e2;
 }
 
-/* Estilo para telas menores */
 @media (max-width: 768px) {
     .sidebar {
-        transform: translateX(-100%); /* Esconde a sidebar */
+        transform: translateX(-100%);
     }
 
     .sidebar.active {
-        transform: translateX(0); /* Mostra a sidebar quando ativa */
+        transform: translateX(0);
     }
 }
 
-/* Estilo para o botão de abrir/fechar */
 .toggle-btn {
-    display: none; /* Oculta o botão por padrão */
+    display: none;
 }
 
-/* Mostra o botão em telas menores */
 @media (max-width: 768px) {
     .toggle-btn {
-        display: block; /* Mostra o botão */
-        position: absolute; /* Para posicionar o botão na tela */
-        top: 20px; /* Distância do topo */
-        left: 20px; /* Distância da esquerda */
-        background-color: #f4f4f4; /* Cor de fundo do botão */
-        border: none; /* Remove a borda */
-        padding: 10px; /* Espaçamento interno */
-        cursor: pointer; /* Muda o cursor para indicar que é clicável */
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: #f4f4f4;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        border-radius: 4px; /* Bordas arredondadas */
-        z-index: 1001; /* Para garantir que o botão fique acima do conteúdo */
+        border-radius: 4px;
+        z-index: 1001;
     }
 }

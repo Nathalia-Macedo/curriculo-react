@@ -1,48 +1,42 @@
-/* Container principal da galeria */
 .gallery-container {
-  padding: 20px; /* Espaçamento interno */
+  padding: 20px;
 }
 
 .gallery {
-  column-count: 3; /* Número de colunas em desktops */
-  column-gap: 15px; /* Espaçamento entre as colunas */
+  column-count: 3;
+  column-gap: 15px;
 }
 
-/* Estilo para os itens da galeria */
 .gallery-item {
-  break-inside: avoid; /* Evita que os itens quebrem dentro das colunas */
-  margin-bottom: 15px; /* Espaçamento entre as imagens */
+  break-inside: avoid;
+  margin-bottom: 15px;
   position: relative;
   overflow: hidden;
-  border-radius: 8px; /* Borda arredondada */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Diminuindo o tamanho das imagens */
 .gallery-item img {
-  width: 95%; /* Ajuste a largura para ocupar menos espaço */
-  height: auto; /* Mantém a proporção das imagens */
+  width: 95%;
+  height: auto;
   display: block;
-  transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+  transition: transform 0.3s ease;
 }
 
-/* Efeito de zoom ao passar o mouse */
 .gallery-item:hover img {
-  transform: scale(1.05); /* Efeito de zoom nas imagens ao passar o mouse */
+  transform: scale(1.05);
 }
 
-/* Responsividade para tablets */
 @media (max-width: 1024px) {
   .gallery {
-    column-count: 2; /* Diminui o número de colunas em tablets */
+    column-count: 2;
     column-gap: 10px;
   }
 }
 
-/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
   .gallery {
-    column-count: 1; /* Apenas uma coluna em dispositivos móveis */
+    column-count: 1;
     column-gap: 0;
   }
 
@@ -51,16 +45,15 @@
   }
 }
 
-/* Estilo para a mensagem de agradecimento */
 .thank-you-message {
-  margin-bottom: 20px; /* Espaço abaixo da mensagem */
-  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .thank-you-message h1 {
-  font-size: 1.8rem; /* Tamanho do título */
+  font-size: 1.8rem;
 }
 
 .thank-you-message p {
-  font-size: 1rem; /* Tamanho do texto */
+  font-size: 1rem;
 }

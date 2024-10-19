@@ -1,0 +1,83 @@
+section {
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #6e45e2, #88d3ce);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Arial', sans-serif; /* Fonte clean */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2); /* Fundo leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para permitir efeitos de animação */
+  }
+  
+  li:hover {
+    transform: translateY(-5px); /* Elevação no hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  h3 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    color: #ffd700; /* Azul mais intenso para os títulos dos cursos */
+  }
+  
+  p {
+    margin: 5px 0;
+    color: #fff; /* Branco para os textos */
+    line-height: 1.5; /* Aumenta a legibilidade */
+  }
+  
+  strong {
+    color: #333; /* Cinza escuro para os rótulos */
+    font-weight: bold; /* Negrito para destaque */
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    h3 {
+      font-size: 1.5rem; /* Tamanho menor em telas pequenas */
+    }
+  
+    li {
+      padding: 15px; /* Menos padding em telas pequenas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.7rem; /* Tamanho menor em telas muito pequenas */
+    }
+  
+    h3 {
+      font-size: 1.3rem; /* Tamanho menor em telas muito pequenas */
+    }
+  
+    li {
+      padding: 10px; /* Menos padding em telas muito pequenas */
+    }
+  }
+  

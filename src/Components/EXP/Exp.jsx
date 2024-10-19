@@ -2,7 +2,7 @@
 import React from 'react';
 import { useCurriculo } from '../../Context/Dados';
 import ExperienciaCard from '../ExperienciaCard/ExperienciaCard';
-import './Exp.css'; // Importar o CSS
+import './Exp.css'; 
 
 const Experiencias = () => {
   const { textos } = useCurriculo();

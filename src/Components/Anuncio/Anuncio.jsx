@@ -1,4 +1,3 @@
-// AdComponent.js
 import React from 'react';
 import './Anuncio.css';
 

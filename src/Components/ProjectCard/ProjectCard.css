@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Estilo geral dos cards */
 .project-card {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: linear-gradient(135deg, #6e45e2, #88d3ce); /* Gradiente para criar conexão com a modernidade */
+  background: linear-gradient(135deg, #6e45e2, #88d3ce);
   color: #fff;
   border-radius: 15px;
   padding: 20px;
@@ -16,32 +15,29 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
 }
-/* Contadores.css */
 
 .mostrar-mais-button,
 .mostrar-menos-button {
-  margin-top: 20px; /* Espaço acima do botão */
-  padding: 10px 20px; /* Espaçamento interno do botão */
-  background-color: #007bff; /* Cor de fundo */
-  color: #fff; /* Cor do texto */
-  border: none; /* Remove bordas */
-  border-radius: 5px; /* Bordas arredondadas */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  transition: background-color 0.3s; /* Efeito de transição */
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .mostrar-mais-button:hover,
 .mostrar-menos-button:hover {
-  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  background-color: #0056b3;
 }
 
-/* Animação ao passar o mouse no card */
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Efeito de destaque interativo */
 .project-card::before {
   content: '';
   position: absolute;
@@ -87,28 +83,23 @@
 }
 
 .project-content a:hover {
-  color: #fff; /* Muda a cor ao passar o mouse */
+  color: #fff;
 }
 
-/* Estilo do container que comporta os cards */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 20px;
   padding: 40px;
-  justify-items: center; /* Centraliza os cards */
+  justify-items: center;
 }
 
-/* Estilo para dispositivos móveis */
 @media (max-width: 768px) {
   .projects-container {
-    grid-template-columns: 1fr; /* Empilha os cards em telas menores */
+    grid-template-columns: 1fr;
   }
 }
 
-/* Adicionando interatividade com movimento sutil */
-
-
 .project-card:hover .project-content p {
-  color: #ffffff; /* Torna a descrição mais visível */
+  color: #ffffff;
 }

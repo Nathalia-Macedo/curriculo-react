@@ -1,18 +1,16 @@
-/* Container da sessão de contato */
 .contato-container {
-  background-color: #eae9f2; /* Cor de fundo suave, alinhada ao visual geral */
-  padding: 50px 0; /* Espaçamento vertical */
+  background-color: #eae9f2;
+  padding: 50px 0;
   text-align: center;
 }
 
 .contato-container h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  color: #2b2b2b; /* Texto em cinza escuro */
+  color: #2b2b2b;
   margin-bottom: 20px;
 }
 
-/* Estilos para os ícones de contato */
 .icones-contato {
   display: flex;
   justify-content: center;
@@ -20,43 +18,41 @@
 }
 
 .contato-icone {
-  color: #6e45e2; /* Cor principal dos ícones (roxo do gradiente) */
-  font-size: 2.5rem; /* Tamanho dos ícones */
+  color: #6e45e2;
+  font-size: 2.5rem;
   transition: color 0.3s ease;
 }
 
 .contato-icone:hover {
-  color: #88d3ce; /* Cor ao passar o mouse (verde água do gradiente) */
+  color: #88d3ce;
   cursor: pointer;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .contato-icone {
-    font-size: 2rem; /* Ajusta o tamanho dos ícones em telas menores */
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .contato-icone {
-    font-size: 1.8rem; /* Ícones ainda menores para telas muito pequenas */
+    font-size: 1.8rem;
   }
 }
-/* Container da sessão de contato */
+
 .contato-container.escuro {
-  background-color: #2b2b2b; /* Cor de fundo escura */
-  padding: 50px 0; /* Espaçamento vertical */
+  background-color: #2b2b2b;
+  padding: 50px 0;
   text-align: center;
 }
 
 .contato-container.escuro h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  color: #eae9f2; /* Texto em branco para contraste com fundo escuro */
+  color: #eae9f2;
   margin-bottom: 20px;
 }
 
-/* Estilos para os ícones de contato */
 .icones-contato {
   display: flex;
   justify-content: center;
@@ -64,25 +60,24 @@
 }
 
 .contato-icone.escuro {
-  color: #88d3ce; /* Cor principal dos ícones (verde água) */
-  font-size: 2.5rem; /* Tamanho dos ícones */
+  color: #88d3ce;
+  font-size: 2.5rem;
   transition: color 0.3s ease;
 }
 
 .contato-icone.escuro:hover {
-  color: #6e45e2; /* Cor ao passar o mouse (roxo do gradiente) */
+  color: #6e45e2;
   cursor: pointer;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .contato-icone.escuro {
-    font-size: 2rem; /* Ajusta o tamanho dos ícones em telas menores */
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .contato-icone.escuro {
-    font-size: 1.8rem; /* Ícones ainda menores para telas muito pequenas */
+    font-size: 1.8rem;
   }
 }

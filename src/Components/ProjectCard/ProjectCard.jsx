@@ -1,6 +1,5 @@
-// ProjectCard.js
 import React from 'react';
-import './ProjectCard.css'; // Certifique-se de que o caminho esteja correto
+import './ProjectCard.css'; 
 
 const ProjectCard = ({ projeto }) => {
   return (

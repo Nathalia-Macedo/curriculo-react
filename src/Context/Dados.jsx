@@ -70,7 +70,28 @@ export const CurriculoProvider = ({ children }) => {
         title: 'Criação de Conteúdo',
         description: 'Comecei recentemente a desenvolver conteúdo no Instagram e na Hotmart!',
       },
+      ],
+       formacaoData : [
+      {
+        nomeCurso: "Análise e Desenvolvimento de Sistemas",
+        instituicao: "Faculdade Estácio de Sá",
+        duracao: "2022 - 2025",
+        descricao: "Curso focado em desenvolvimento de software, algoritmos e estruturas de dados.",
+      },
+      {
+        nomeCurso: " Programação Full Stack",
+        instituicao: "Infinity School",
+        duracao: "2020 - 2021",
+        descricao: "Formação prática em programação, banco de dados e desenvolvimento web.",
+      },
+      {
+        nomeCurso: "Curso de Fundamentos de ITIL",
+        instituicao: "Fundação Bradesco",
+        duracao: "2023",
+        descricao: "Aprofundamento em técnicas de machine learning e suas aplicações.",
+      },
     ],
+    
     contadorDados: {
       anosDeExperiencia: 3,
       projetosCompletados: 20,

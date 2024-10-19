@@ -1,15 +1,12 @@
-/* Container para os cards de experiência */
 .experiencia-container {
   display: flex;
-  flex-wrap: wrap; /* Permite quebra de linha quando necessário */
-  justify-content: center; /* Centraliza os cards horizontalmente */
-  gap: 20px; /* Espaçamento entre os cards */
-  width: 100%; /* O container ocupa toda a largura disponível */
-  /* max-width: 1200px; Limita a largura máxima em telas grandes */
-  margin: 0 auto; /* Centraliza o container */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-/* Estilo dos cards de experiência */
 .experiencia-card {
   display: flex;
   flex-direction: column;
@@ -20,12 +17,11 @@
   padding: 20px;
   margin: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Largura fixa dos cards */
+  width: 300px;
   text-align: center;
   transition: all 0.3s ease;
 }
 
-/* Estilo do logo da empresa */
 .company-logo {
   width: 60px;
   height: 60px;
@@ -72,26 +68,24 @@
   color: #333;
 }
 
-/* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
   .experiencia-card {
-    width: 90%; /* O card ocupa 90% da largura da tela em dispositivos menores */
+    width: 90%;
     margin: 10px auto;
   }
 }
 
-/* Responsividade para telas muito pequenas (smartphones) */
 @media (max-width: 480px) {
   .experiencia-card {
-    width: 100%; /* O card ocupa toda a largura da tela */
+    width: 100%;
     margin: 10px 0;
   }
 
   .company-name {
-    font-size: 1em; /* Ajuste no tamanho da fonte */
+    font-size: 1em;
   }
 
   .work-period {
-    font-size: 0.8em; /* Ajuste no tamanho da fonte do período */
+    font-size: 0.8em;
   }
 }
