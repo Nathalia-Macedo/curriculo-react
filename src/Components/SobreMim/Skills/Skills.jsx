@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Skills.css';
 
-const Skills = ({ tema }) => {
-  const { textos } = useCurriculo();
+const Skills = () => {
+  const { textos, tema } = useCurriculo(); // Extraia o tema do contexto
   const { skillsData } = textos;
 
   // Configurações do carrossel
