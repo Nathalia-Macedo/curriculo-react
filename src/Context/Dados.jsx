@@ -31,18 +31,30 @@ export const CurriculoProvider = ({ children }) => {
     ],
     experiencias: [
       {
-        empresa: 'Brasilgás',
-        anoEntrada: '2020',
-        anoSaida: '2021',
-        descricao: 'Registro de contas a pagar, atendimento ao cliente, lançamento de notas fiscais!',
+        empresa: 'Infinity School',
+        anoEntrada: 'Janeiro/2023',
+        anoSaida: 'Agosto/2023',
+        descricao: 'Ministrar aulas particulares, lives, workshops, aulas de reposição, correção de provas, organização e manutenção das salas de aulas, além de acompanhar o professor, auxiliando com as dúvidas dos alunos',
         logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCT8NHZ0-WSLxWmcFx_i0Kz8ai4aN5AQiwIQ&s'
       }, {
-        empresa: 'Burger King',
-        anoEntrada: '2021',
-        anoSaida: '2021',
-        descricao: 'Preparo de hamburgueres e batatas, limpeza do local, organização das mesas e atendimento ao cliente',
+        empresa: 'TOTVS',
+        anoEntrada: 'Agosto/2023',
+        anoSaida: 'Abril/2024',
+        descricao: 'Atuação como estagiária front end, desenvolvendo layout dos sistemas',
         logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1879px-Burger_King_2020.svg.png'
-      },
+      },{
+        empresa: 'Infinity School',
+        anoEntrada: 'Dezembro/2023',
+        anoSaida: 'Emprego Atual',
+        descricao: 'Atuação como professora front End na Infinity School, ministrando workshops, aulas regulares e supermódulos!',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1879px-Burger_King_2020.svg.png'
+      },{
+        empresa: 'Programadora Front End',
+        anoEntrada: '2022',
+        anoSaida: 'Emprego Atual',
+        descricao: 'Atuação como desenvolvedora Front End',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1879px-Burger_King_2020.svg.png'
+      }
     ],
     timelineEventos: [
       {
@@ -76,20 +88,32 @@ export const CurriculoProvider = ({ children }) => {
         nomeCurso: "Análise e Desenvolvimento de Sistemas",
         instituicao: "Faculdade Estácio de Sá",
         duracao: "2022 - 2025",
-        descricao: "Curso focado em desenvolvimento de software, algoritmos e estruturas de dados.",
+        descricao: "Curso focado em capacitar os alunos a projetar, desenvolver e implementar soluções tecnológicas para atender às necessidades de empresas e usuários",
       },
       {
         nomeCurso: " Programação Full Stack",
         instituicao: "Infinity School",
-        duracao: "2020 - 2021",
+        duracao: "2022 - 2023",
         descricao: "Formação prática em programação, banco de dados e desenvolvimento web.",
       },
       {
         nomeCurso: "Curso de Fundamentos de ITIL",
         instituicao: "Fundação Bradesco",
         duracao: "2023",
-        descricao: "Aprofundamento em técnicas de machine learning e suas aplicações.",
+        descricao: "O curso de Fundamentos de ITIL apresenta os princípios essenciais do gerenciamento de serviços de TI, focando nas melhores práticas para a entrega eficaz e eficiente de serviços",
       },
+      {
+        nomeCurso: "Curso de Fundamentos de COBIT",
+        instituicao: "Fundação Bradesco",
+        duracao: "2023",
+        descricao: "O curso de Fundamentos de COBIT aborda os princípios e práticas do framework COBIT, destacando a importância da governança e gerenciamento de TI",
+      },
+      {
+        nomeCurso: "Lei Geral de Proteção de Dados no TOTVS Fluig Plataforma",
+        instituicao: "TOTVS Fluig",
+        duracao: "2023",
+        descricao: "O curso de LGPD aborda os princípios e requisitos da Lei Geral de Proteção de Dados, capacitando os participantes a implementar práticas de conformidade eficazes. Utilizando a plataforma TOTVS Fluig, os alunos exploram como gerenciar e proteger dados pessoais, além de entender os direitos dos titulares.",
+      }
     ],
     
     contadorDados: {

@@ -1,83 +1,85 @@
-section {
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #6e45e2, #88d3ce);
-    color: #fff;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+.formacao-section {
+  padding: 40px 20px; /* Padding geral para o contêiner */
+  background: #f0f4f8; /* Fundo suave e claro */
+  color: #333; /* Texto em cinza escuro */
+  text-align: center; /* Centraliza o texto */
+  border-radius: 8px; /* Bordas levemente arredondadas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+}
+
+.formacao-section h2 {
+  font-size: 2.5rem; /* Tamanho do título */
+  margin-bottom: 30px; /* Margem abaixo do título */
+  font-family: 'Arial', sans-serif; /* Fonte clean e moderna */
+  color: #5a67d8; /* Cor azul suave para o título */
+}
+
+.formacao-list {
+  list-style-type: none; /* Remove marcadores */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margens */
+  display: flex; /* Flexbox para layout */
+  flex-wrap: wrap; /* Permite quebra em múltiplas linhas */
+  justify-content: center; /* Centraliza os itens */
+}
+
+.formacao-item {
+  margin: 15px; /* Margem entre os cards */
+  padding: 20px; /* Padding interno do card */
+  border-radius: 8px; /* Bordas arredondadas */
+  background: #ffffff; /* Fundo branco para os cards */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave para sombra e transformação */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  width: 520px; /* Largura dos cards */
+  text-align: left; /* Alinha texto à esquerda */
+  border-left: 4px solid #5a67d8; /* Borda lateral para destaque */
+}
+
+#titleformacao{
+    font-family: 'Poppins',sans-serif;
+}
+
+.formacao-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Aumenta a sombra no hover */
+  transform: translateY(-5px); /* Levanta o card no hover */
+}
+
+.formacao-item h3 {
+  font-size: 1.5rem; /* Tamanho do título do curso */
+  margin: 0 0 10px 0; /* Margem abaixo do título */
+  color: #2d3748; /* Cor do título em cinza escuro */
+}
+
+.formacao-item p {
+  margin: 5px 0; /* Margem entre parágrafos */
+  line-height: 1.6; /* Aumenta a legibilidade */
+  color: #4a5568; /* Cor do texto secundário em cinza */
+}
+
+.formacao-item strong {
+  color: #5a67d8; /* Cor azul para rótulos */
+  font-weight: 600; /* Negrito para destaque */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .formacao-section h2 {
+    font-size: 2rem; /* Tamanho do título menor */
   }
-  
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #fff;
-    font-family: 'Arial', sans-serif; /* Fonte clean */
+
+  .formacao-item {
+    width: 180px; /* Largura reduzida em telas menores */
   }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+}
+
+@media (max-width: 480px) {
+  .formacao-section h2 {
+    font-size: 1.5rem; /* Tamanho do título menor em telas muito pequenas */
   }
-  
-  li {
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.2); /* Fundo leve */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* Para permitir efeitos de animação */
+
+  .formacao-item {
+    width: 100%; /* Largura total em telas muito pequenas */
+    max-width: 300px; /* Largura máxima dos cards */
+    padding: 15px; /* Menos padding em telas muito pequenas */
   }
-  
-  li:hover {
-    transform: translateY(-5px); /* Elevação no hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  h3 {
-    font-size: 1.8rem;
-    margin: 0 0 10px 0;
-    color: #ffd700; /* Azul mais intenso para os títulos dos cursos */
-  }
-  
-  p {
-    margin: 5px 0;
-    color: #fff; /* Branco para os textos */
-    line-height: 1.5; /* Aumenta a legibilidade */
-  }
-  
-  strong {
-    color: #333; /* Cinza escuro para os rótulos */
-    font-weight: bold; /* Negrito para destaque */
-  }
-  
-  /* Estilos Responsivos */
-  @media (max-width: 768px) {
-    h2 {
-      font-size: 2rem;
-    }
-  
-    h3 {
-      font-size: 1.5rem; /* Tamanho menor em telas pequenas */
-    }
-  
-    li {
-      padding: 15px; /* Menos padding em telas pequenas */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h2 {
-      font-size: 1.7rem; /* Tamanho menor em telas muito pequenas */
-    }
-  
-    h3 {
-      font-size: 1.3rem; /* Tamanho menor em telas muito pequenas */
-    }
-  
-    li {
-      padding: 10px; /* Menos padding em telas muito pequenas */
-    }
-  }
-  
+}
