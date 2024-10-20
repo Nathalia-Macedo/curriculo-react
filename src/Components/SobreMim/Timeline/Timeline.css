@@ -35,7 +35,7 @@
 
 /* Estilo adicional para o tema escuro */
 [data-tema='escuro'] .vertical-timeline-element-content {
-    background-color: #1d1515; /* Fundo escuro para o tema escuro */
+    background-color: #000000; /* Fundo escuro para o tema escuro */
     color: #ddd; /* Texto claro para contraste no tema escuro */
 }
 

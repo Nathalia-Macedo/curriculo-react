@@ -60,7 +60,7 @@ export const CurriculoProvider = ({ children }) => {
       {
         year: '2022',
         title: 'Conhecendo a Infinity School',
-        description: 'Fiz uma visita a Infinity School e me apaixonei pela estrutura do local, fora os benefícios que me permitiam iniciar meus estudos na área que sempre quis! Meu curso começou outubro de 2022',
+        description: 'Fiz uma visita a Infinity School e me apaixonei pela estrutura do local, fora os benefícios que me permitiam iniciar meus estudos na área que sempre quis! Meu curso começou outubro de 2022. Fui classificada no TOP3 do ranking no meu primeiro mês',
       },
       {
         year: '2023',
@@ -70,17 +70,21 @@ export const CurriculoProvider = ({ children }) => {
       {
         year: '2023',
         title: 'Professora Particular de programação',
-        description: 'Durante o processo de monitoria, comecei a ministrar aulas particulares também!',
+        description: 'Durante o processo de monitoria, comecei a ministrar aulas particulares e a criar meu próprio conteúdo!',
       },
       {
-        year: '2024',
+        year: '2023',
         title: 'Workshops na Infinity School',
-        description: 'Iniciei minha jornada como monitora, ministrando workshops sobre programação, fazendo muito networking.',
+        description: 'Iniciei minha jornada como monitora, ministrando workshops sobre programação, fazendo muito networking. ',
+      },{
+        year: '2023',
+        title: 'Começando na TOTVS',
+        description: 'Em Agosto de 2023, fui contratada como estagiária front End na TOTVS, estágio 100% remoto',
       },
       {
-        year: '2024',
-        title: 'Criação de Conteúdo',
-        description: 'Comecei recentemente a desenvolver conteúdo no Instagram e na Hotmart!',
+        year: '2023',
+        title: 'Professora na Infinity',
+        description: 'Em dezembro de 2023, me tornei professora Front End na Infinity. Em abril de 2024 a TOTVS voltou com o presencial, e infelizmente não pude manter os dois empregos presenciais, aulas particulares e desenvolvimento front end!',
       },
       ],
        formacaoData : [
@@ -119,10 +123,10 @@ export const CurriculoProvider = ({ children }) => {
     contadorDados: {
       anosDeExperiencia: 3,
       projetosCompletados: 20,
-      aulasMinistradas: 50,
-      alunosAtendidos: 100,
+      aulasMinistradas: 500,
+      alunosAtendidos: 900,
       conteudosCriados: 200,
-      workshopsRealizados: 70,
+      workshopsRealizados: 120,
       interacoesRedesSociais: 500,
       estudantesEmTutoria: 15,
       livesRealizadas: 50,
@@ -135,10 +139,10 @@ export const CurriculoProvider = ({ children }) => {
       { id: 5, skill: "Node.js", nivel: "Intermediário", image: NODE },
       { id: 6, skill: "Typescript", nivel: "Intermediário", image: TS },
       { id: 7, skill: "Next JS", nivel: "Intermediário", image: NEXT },
-      { id: 8, skill: "Selenium", nivel: "Intermediário", image: SELENIUM },
+      { id: 8, skill: "Selenium", nivel: "Avançado", image: SELENIUM },
       { id: 9, skill: "GIT", nivel: "Intermediário", image: GIT },
       { id: 10, skill: "GitHub", nivel: "Intermediário", image: GITHUB },
-      { id: 11, skill: "Python", nivel: "Intermediário", image: PYTHON },
+      { id: 11, skill: "Python", nivel: "Avançado", image: PYTHON },
     ],
     tema: 'claro' // Adicionando a variável tema aqui
   });

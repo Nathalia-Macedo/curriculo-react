@@ -1,85 +1,112 @@
+/* Formacao.css */
+
+/* Estilos Gerais */
 .formacao-section {
-  padding: 40px 20px; /* Padding geral para o contêiner */
-  background: #f0f4f8; /* Fundo suave e claro */
-  color: #333; /* Texto em cinza escuro */
-  text-align: center; /* Centraliza o texto */
-  border-radius: 8px; /* Bordas levemente arredondadas */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
-}
-
-.formacao-section h2 {
-  font-size: 2.5rem; /* Tamanho do título */
-  margin-bottom: 30px; /* Margem abaixo do título */
-  font-family: 'Arial', sans-serif; /* Fonte clean e moderna */
-  color: #5a67d8; /* Cor azul suave para o título */
-}
-
-.formacao-list {
-  list-style-type: none; /* Remove marcadores */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margens */
-  display: flex; /* Flexbox para layout */
-  flex-wrap: wrap; /* Permite quebra em múltiplas linhas */
-  justify-content: center; /* Centraliza os itens */
-}
-
-.formacao-item {
-  margin: 15px; /* Margem entre os cards */
-  padding: 20px; /* Padding interno do card */
-  border-radius: 8px; /* Bordas arredondadas */
-  background: #ffffff; /* Fundo branco para os cards */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave para sombra e transformação */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra suave */
-  width: 520px; /* Largura dos cards */
-  text-align: left; /* Alinha texto à esquerda */
-  border-left: 4px solid #5a67d8; /* Borda lateral para destaque */
-}
-
-#titleformacao{
-    font-family: 'Poppins',sans-serif;
-}
-
-.formacao-item:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Aumenta a sombra no hover */
-  transform: translateY(-5px); /* Levanta o card no hover */
-}
-
-.formacao-item h3 {
-  font-size: 1.5rem; /* Tamanho do título do curso */
-  margin: 0 0 10px 0; /* Margem abaixo do título */
-  color: #2d3748; /* Cor do título em cinza escuro */
-}
-
-.formacao-item p {
-  margin: 5px 0; /* Margem entre parágrafos */
-  line-height: 1.6; /* Aumenta a legibilidade */
-  color: #4a5568; /* Cor do texto secundário em cinza */
-}
-
-.formacao-item strong {
-  color: #5a67d8; /* Cor azul para rótulos */
-  font-weight: 600; /* Negrito para destaque */
-}
-
-/* Estilos Responsivos */
-@media (max-width: 768px) {
+    padding: 40px 20px; /* Padding geral para o contêiner */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais pronunciada */
+    transition: background 0.3s ease, color 0.3s ease; /* Transição suave para fundo e cor */
+  }
+  
+  /* Tema Claro */
+  .formacao-section.claro {
+    background: #f0f4f8; /* Fundo suave e claro */
+    color: #333; /* Texto em cinza escuro */
+  }
+  
+  /* Tema Escuro */
+  .formacao-section.escuro {
+    background: #000000; /* Fundo muito escuro */
+    color: #e2e8f0; /* Texto em claro */
+  }
+  
+  /* Estilos do Título */
   .formacao-section h2 {
-    font-size: 2rem; /* Tamanho do título menor */
+    text-align: center;
+    font-size: 2.5rem; /* Tamanho do título */
+    margin-bottom: 30px; /* Margem abaixo do título */
+    font-family: 'Arial', sans-serif; /* Fonte clean e moderna */
+    color: #5a67d8; /* Cor azul suave para o título */
   }
-
+  
+  /* Estilos da Lista de Formação */
+  .formacao-list {
+    list-style-type: none; /* Remove marcadores */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margens */
+    display: flex; /* Flexbox para layout */
+    flex-wrap: wrap; /* Permite quebra em múltiplas linhas */
+    justify-content: center; /* Centraliza os itens */
+  }
+  
+  /* Estilos dos Itens da Formação */
   .formacao-item {
-    width: 180px; /* Largura reduzida em telas menores */
+    margin: 15px; /* Margem entre os cards */
+    padding: 20px; /* Padding interno do card */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave para sombra e transformação */
+    width: 520px; /* Largura dos cards */
+    text-align: left; /* Alinha texto à esquerda */
   }
-}
-
-@media (max-width: 480px) {
-  .formacao-section h2 {
-    font-size: 1.5rem; /* Tamanho do título menor em telas muito pequenas */
+  
+  /* Tema Claro - Itens */
+  .formacao-item.claro {
+    background: #ffffff; /* Fundo branco para os cards */
+    border-left: 4px solid #5a67d8; /* Borda lateral para destaque */
+    color: #2d3748; /* Cor do texto dos itens */
   }
-
-  .formacao-item {
-    width: 100%; /* Largura total em telas muito pequenas */
-    max-width: 300px; /* Largura máxima dos cards */
-    padding: 15px; /* Menos padding em telas muito pequenas */
+  
+  /* Tema Escuro - Itens */
+  .formacao-item.escuro {
+    background: #fafcff; /* Fundo cinza escuro */
+    border-left: 4px solid #63b3ed; /* Borda lateral azul para destaque */
+    color: #090909; /* Cor do texto dos itens */
   }
-}
+  
+  /* Estilos dos Títulos dos Itens */
+  .formacao-item h3 {
+    font-size: 1.5rem; /* Tamanho do título do curso */
+    margin: 0 0 10px 0; /* Margem abaixo do título */
+  }
+  
+  /* Estilos dos Parágrafos */
+  .formacao-item p {
+    margin: 5px 0; /* Margem entre parágrafos */
+    line-height: 1.6; /* Aumenta a legibilidade */
+  }
+  
+  /* Estilos dos Rótulos */
+  .formacao-item strong {
+    color: #63b3ed; /* Cor azul para rótulos */
+    font-weight: 600; /* Negrito para destaque */
+  }
+  
+  /* Estilos de Hover nos Itens */
+  .formacao-item:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Aumenta a sombra no hover */
+    transform: translateY(-5px); /* Levanta o card no hover */
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    .formacao-section h2 {
+      font-size: 2rem; /* Tamanho do título menor */
+    }
+  
+    .formacao-item {
+      width: 180px; /* Largura reduzida em telas menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .formacao-section h2 {
+      font-size: 1.5rem; /* Tamanho do título menor em telas muito pequenas */
+    }
+  
+    .formacao-item {
+      width: 100%; /* Largura total em telas muito pequenas */
+      max-width: 300px; /* Largura máxima dos cards */
+      padding: 15px; /* Menos padding em telas muito pequenas */
+    }
+  }
+  
