@@ -75,7 +75,7 @@
 
 /* Tema escuro */
 .experiencias-section.escuro {
-    background-color: rgb(41, 39, 39); /* Cor de fundo escura */
+    background-color: #1a1a1a; /* Cor de fundo escura */
     color: #0b0b0b; /* Cor do texto clara */
 }
 

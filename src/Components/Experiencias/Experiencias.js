@@ -28,6 +28,7 @@ const Experiencias = () => {
 
   return (
     <section id='experiencias' className={`experiencias-section ${tema}`}>
+      {tema === 'escuro' && <div className="stars" />} {/* Adiciona as estrelas no tema escuro */}
       <h2>Experiências Profissionais</h2>
       <div className="board-container">
         {textos.experiencias.map((experiencia, index) => (
