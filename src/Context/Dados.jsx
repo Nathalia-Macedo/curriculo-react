@@ -10,8 +10,10 @@ import SELENIUM from '../Assets/selenium.png';
 import GIT from '../Assets/git.png';
 import GITHUB from '../Assets/GITHUB.png';
 import PYTHON from '../Assets/Py.png';
-
-
+import TOTVS from '../Assets/TOTVS.webp'
+import IN from '../Assets/in.jpg'
+import superprof from '../Assets/SUPERPROF.png'
+import minhalogo from '../Assets/minhalogo.png'
 // Criar o contexto
 const CurriculoContext = createContext();
 
@@ -31,29 +33,35 @@ export const CurriculoProvider = ({ children }) => {
     ],
     experiencias: [
       {
-        empresa: 'Infinity School',
+        empresa: ' Monitora Infinity School',
         anoEntrada: 'Janeiro/2023',
         anoSaida: 'Agosto/2023',
         descricao: 'Ministrar aulas particulares, lives, workshops, aulas de reposição, correção de provas, organização e manutenção das salas de aulas, além de acompanhar o professor, auxiliando com as dúvidas dos alunos',
-        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCT8NHZ0-WSLxWmcFx_i0Kz8ai4aN5AQiwIQ&s'
-      }, {
-        empresa: 'TOTVS',
+        logo: IN
+        }, {
+        empresa: ' Estagiária Front End TOTVS',
         anoEntrada: 'Agosto/2023',
         anoSaida: 'Abril/2024',
         descricao: 'Atuação como estagiária front end, desenvolvendo layout dos sistemas',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1879px-Burger_King_2020.svg.png'
+        logo: TOTVS
       },{
-        empresa: 'Infinity School',
+        empresa: ' Professora Infinity School',
         anoEntrada: 'Dezembro/2023',
         anoSaida: 'Emprego Atual',
         descricao: 'Atuação como professora front End na Infinity School, ministrando workshops, aulas regulares e supermódulos!',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1879px-Burger_King_2020.svg.png'
+        logo: IN
       },{
         empresa: 'Programadora Front End',
         anoEntrada: '2022',
         anoSaida: 'Emprego Atual',
         descricao: 'Atuação como desenvolvedora Front End',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/1879px-Burger_King_2020.svg.png'
+        logo: minhalogo
+      },{
+        empresa: 'Programadora Particular SUPERPROF',
+        anoEntrada: '2022',
+        anoSaida: 'Emprego Atual',
+        descricao: 'Atuação como professora back e front end particular',
+        logo: superprof
       }
     ],
     timelineEventos: [
@@ -86,7 +94,38 @@ export const CurriculoProvider = ({ children }) => {
         title: 'Professora na Infinity',
         description: 'Em dezembro de 2023, me tornei professora Front End na Infinity. Em abril de 2024 a TOTVS voltou com o presencial, e infelizmente não pude manter os dois empregos presenciais, aulas particulares e desenvolvimento front end!',
       },
-      ],
+      ], experienciasData: [
+        {
+          cargo: "Estagiária Front End",
+          empresa: "TOTVS",
+          duracao: "Agosto de 2023 - Abril de 2024",
+          descricao: "Desenvolveu layouts para sistemas e conectou-se com serviços de backend.",
+        },
+        {
+          cargo: "Monitora",
+          empresa: "Infinity School",
+          duracao: "Janeiro de 2023 - Agosto de 2023",
+          descricao: "Ministrou aulas particulares, workshops e auxiliou professores em sala de aula.",
+        },
+        {
+          cargo: "Professora Front End",
+          empresa: "Infinity School",
+          duracao: "Dezembro de 2023 - Presente",
+          descricao: "Ministrando aulas regulares sobre desenvolvimento Front End, incluindo workshops.",
+        },
+        {
+          cargo: "Professora Particular",
+          empresa: "Superprof",
+          duracao: "Abril de 2023 - Presente",
+          descricao: "Oferecendo aulas particulares em Front e Back End desenvolvimento.",
+        },
+        {
+          cargo: "Programadora Front End",
+          empresa: "Infinity School",
+          duracao: "Dezembro de 2023 - Presente",
+          descricao: "Alto domínio de JavaScript e ReactJS, aprendendo TypeScript e React Native.",
+        },
+      ],      
        formacaoData : [
       {
         nomeCurso: "Análise e Desenvolvimento de Sistemas",
