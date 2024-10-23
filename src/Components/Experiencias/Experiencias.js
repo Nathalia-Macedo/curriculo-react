@@ -14,6 +14,7 @@ const Experiencias = () => {
       clearTimeout(timeoutId);
       setExpandedIndex(null);
     } else {
+      clearTimeout(timeoutId); // Limpa o timeout anterior, se existir
       setExpandedIndex(index);
       const id = setTimeout(() => {
         setExpandedIndex(null);
@@ -23,7 +24,7 @@ const Experiencias = () => {
   };
 
   useEffect(() => {
-    return () => clearTimeout(timeoutId);
+    return () => clearTimeout(timeoutId); // Limpa o timeout na desmontagem
   }, [timeoutId]);
 
   return (
@@ -35,7 +36,7 @@ const Experiencias = () => {
           <motion.div
             key={index}
             className={`board-item ${expandedIndex === index ? 'active' : ''}`}
-            onClick={() => toggleExperience(index)}
+            onClick={() => toggleExperience(index)} // Mantém o toggle apenas para o índice clicado
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
