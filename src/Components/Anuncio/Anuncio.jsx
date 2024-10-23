@@ -1,14 +1,26 @@
-import React from 'react';
-import './Anuncio.css';
+import { useEffect } from 'react';
 
-const AdComponent = ({ imageUrl, link }) => {
+const AnuncioGoogle = ({ adClient, adSlot, adFormat = "auto", fullWidthResponsive = true }) => {
+  useEffect(() => {
+    // Verificar se o script adsbygoogle já foi carregado
+    if (typeof window.adsbygoogle !== 'undefined' && window.adsbygoogle.length === 0) {
+      // Se não houver elementos a serem empurrados, empurrar o anúncio
+      try {
+        window.adsbygoogle.push({});
+      } catch (e) {
+        console.error("Falha ao carregar o anúncio Google: ", e);
+      }
+    }
+  }, []);
+
   return (
-    <div className="ad-container">
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={imageUrl} alt="Anúncio" />
-      </a>
-    </div>
+    <ins className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client={adClient}
+      data-ad-slot={adSlot}
+      data-ad-format={adFormat}
+      data-full-width-responsive={fullWidthResponsive}></ins>
   );
 };
 
-export default AdComponent;
+export default AnuncioGoogle;

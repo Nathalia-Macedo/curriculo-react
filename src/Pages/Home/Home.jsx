@@ -9,6 +9,7 @@ import SobreMim from '../../Components/SobreMim/SobreMim';
 import Gallery from '../../Components/Galery/Galery';
 import Formacao from '../../Components/Formacao/Formacao';
 import Experiencias from '../../Components/Experiencias/Experiencias';
+import AnuncioGoogle from '../../Components/Anuncio/Anuncio';
 const Home = () => {
   const { textos, tema, alternarTema } = useCurriculo(); // Pega o tema do contexto
 
@@ -27,8 +28,16 @@ const Home = () => {
           <ProjectCard key={projeto.id} projeto={projeto} />
         ))}
       </div>
+      <AnuncioGoogle
+        adClient="ca-pub-5353295040187805"
+        adSlot="4639444627"
+      />
       <Experiencias/>
 <Formacao/>
+<AnuncioGoogle
+        adClient="ca-pub-5353295040187805"
+        adSlot="2935480714"
+      />
       <AulasParticulares />
       <Gallery/>
       <Contato />
